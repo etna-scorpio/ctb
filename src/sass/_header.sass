@@ -1,0 +1,128 @@
+.header
+	$this: &
+	position: fixed
+	z-index: 10
+	top: 0
+	left: 0
+	right: 0
+	min-width: 250px
+	background: #4E545D
+	// background-image: linear-gradient($cool-grey, $cool-grey), linear-gradient(rgba(137, 142, 150, 0.8), rgba(137, 142, 150, 0.8))
+	// background-blend-mode: multiply, normal
+	&:before
+		content: ""
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		background: #4E545D
+		// background-image: linear-gradient($cool-grey, $cool-grey), linear-gradient(rgba(137, 142, 150, 0.8), rgba(137, 142, 150, 0.8))
+		+blur(10px)
+	&__in
+		position: relative
+		display: flex
+		-webkit-justify-content: space-between
+		justify-content: space-between
+		align-items: center
+	&__group
+		&_main
+			display: none
+			flex-basis: 390px
+			+rmin($md)
+				display: block
+			#{$this}__option
+				margin: 0 15px
+				&:last-child
+					margin-right: 0
+		&_token
+			#{$this}__option
+				display: none
+				+rmin($md)
+					display: inline-block
+					margin-right: 55px
+					&:last-child
+						margin-right: 0
+				&:first-child
+					display: inline-block
+	&__list
+		font-size: 0
+	&__option
+		display: inline-block
+	&__link
+		font-size: 19px
+		font-weight: 500
+		line-height: 1.26
+		letter-spacing: -0.1px
+		color: $pale-grey-three
+
+.menu-ico
+	position: relative
+	width: 34px
+	height: 26px
+	+rmin($md)
+		display: none
+	&--active
+		&:before
+			transform: rotate(45deg) translate3d(1.5px, 1px, 0)
+		&:after
+			+rotate(-45)
+		span
+			opacity: 0
+	&:before,
+	&:after
+		content: ""
+		position: absolute
+		width: 100%
+		border-bottom: 1px solid #F7F9FB
+		transform-origin: 0 0
+		transition: transform 0.2s linear
+	&:after
+		bottom: 0
+	span
+		position: absolute
+		top: 50%
+		width: 100%
+		margin-top: -0.5px
+		border-bottom: 1px solid #F7F9FB
+		transition: opacity 0.2s linear
+
+.logo
+	display: inline-block
+	margin-left: 15px
+	font-size: 64px
+	color: #96C0FF
+	line-height: 1
+	+rmin($md)
+		margin-left: 0
+		font-size: 68px
+	svg
+		display: block
+
+
+.social
+	display: none
+	font-size: 0
+	+rmin($md)
+		display: block
+	&__option
+		display: inline-block
+		margin: 0 10px
+		&:last-child
+			margin-right: 0
+	&__link
+		display: block
+	&__ico
+		display: block
+		width: 24px
+		height: 24px
+		background-size: contain
+		background-repeat: no-repeat
+		&_github
+			background-image: url(../multicolor-svg/github.svg)
+		&_telegram
+			background-image: url(../multicolor-svg/telegram.svg)
+		&_twitter
+			background-image: url(../multicolor-svg/twitter.svg)
+		&_medium
+			background-image: url(../multicolor-svg/medium.svg)

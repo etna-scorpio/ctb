@@ -1,5 +1,17 @@
 body
-  background: #FFF
-  +css-lock(16, 50, 600, 1000)
-  line-height: 1.4
+	min-width: 320px
+	background: $pale-grey
+	font-family: 'Roboto', sans-serif
+	line-height: 1.4
 
+a
+	text-decoration: none
+
+.l-center
+	max-width: 978px
+	margin: 0 auto
+	padding: 0 12px
+	+rmin($lg)
+		max-width: 1388px
+	+rmin($xl)
+		max-width: 1578px

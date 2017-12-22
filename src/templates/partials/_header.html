@@ -1,1 +1,42 @@
-<p>Hello from partials/_header.html</p>
+<header class="header">
+	<div class="l-center">
+		<div class="header__in">
+			<a href="#" class="menu-ico js-menu-ico"><span></span></a>
+			<a href="#" class="logo">{{ mixins.icon('logo') }}</a>
+
+			{% set headerGroup = [{
+				mod: 'header__group_main',
+				links: ['Essentials', 'Technology', 'Learn More']
+			}, {
+				mod: 'header__group_token',
+				links: ['Tokens', 'FAQ', 'Forum']
+			}] %}
+			{% for group in headerGroup %}
+			<div class="header__group {{ group.mod }}">
+				<ul class="header__list">
+					{% for link in group.links %}
+					<li class="header__option"><a href="#" class="header__link">{{ link }}</a></li>
+					{% endfor %}
+				</ul>
+			</div>
+			{% endfor %}
+
+			<div class="social">
+				<ul class="social__list">
+					<li class="social__option">
+						<a href="#" class="social__link"><i class="social__ico social__ico_twitter"></i></a>
+					</li>
+					<li class="social__option">
+						<a href="#" class="social__link"><i class="social__ico social__ico_telegram"></i></a>
+					</li>
+					<li class="social__option">
+						<a href="#" class="social__link"><i class="social__ico social__ico_github"></i></a>
+					</li>
+					<li class="social__option">
+						<a href="#" class="social__link"><i class="social__ico social__ico_medium"></i></a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</header>

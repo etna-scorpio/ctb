@@ -1,0 +1,31 @@
+<!-- begin megacoin -->
+<div class="megacoin">
+	{% set coins = [{
+		name: 'secure'
+	}, {
+		name: 'efficient'
+	}, {
+		name: 'borderless',
+		mod: 'mob-hidden'
+	}, {
+		name: 'fast'
+	}, {
+		name: 'cheap'
+	}, {
+		name: 'optimized'
+	}, {
+		name: 'versalite'
+	}, {
+		name: 'decentralized'
+	}, {
+		name: 'smart'
+	}] %}
+
+	{% for coin in coins %}
+	<div class="coin coin_{{ coin.name }} {% if coin.mod %}coin_{{ coin.mod }}{% endif %}">
+		<div class="coin__pic"></div>
+		<div class="coin__text">{{ coin.name | capitalize }}</div>
+	</div>
+	{% endfor %}
+</div>
+<!-- end megacoin -->

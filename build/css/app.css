@@ -72,35 +72,382 @@ html {
   box-sizing: inherit;
 }
 
-.icon-facebook {
-  width: 0.53em;
+.icon-logo {
+  width: 1em;
   height: 1em;
-  fill: #000;
+  fill: none;
 }
 
 body {
-  background: #FFF;
-  font-size: 50px;
-  font-size: calc(16px + (50 - 16) * ((100vw - 600px) / (1000 - 600)));
+  min-width: 320px;
+  background: #f7f9fb;
+  font-family: 'Roboto', sans-serif;
   line-height: 1.4;
 }
 
-.block {
-  display: -ms-flexbox;
-  display: flex;
+a {
+  text-decoration: none;
 }
 
-@media (min-width: 1000px) {
+.l-center {
+  max-width: 978px;
+  margin: 0 auto;
+  padding: 0 12px;
+}
 
-  body {
-    font-size: 50px;
+.header {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  right: 0;
+  min-width: 250px;
+  background: #4E545D;
+}
+
+.header:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #4E545D;
+  -webkit-filter: blur(10px);
+  filter: blur(10px);
+}
+
+.header__in {
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.header__group_main {
+  display: none;
+  -ms-flex-preferred-size: 390px;
+  flex-basis: 390px;
+}
+
+.header__group_main .header__option {
+  margin: 0 15px;
+}
+
+.header__group_main .header__option:last-child {
+  margin-right: 0;
+}
+
+.header__group_token .header__option {
+  display: none;
+}
+
+.header__group_token .header__option:first-child {
+  display: inline-block;
+}
+
+.header__list {
+  font-size: 0;
+}
+
+.header__option {
+  display: inline-block;
+}
+
+.header__link {
+  font-size: 19px;
+  font-weight: 500;
+  line-height: 1.26;
+  letter-spacing: -0.1px;
+  color: #e5e8ee;
+}
+
+.menu-ico {
+  position: relative;
+  width: 34px;
+  height: 26px;
+}
+
+.menu-ico--active:before {
+  transform: rotate(45deg) translate3d(1.5px, 1px, 0);
+}
+
+.menu-ico--active:after {
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.menu-ico--active span {
+  opacity: 0;
+}
+
+.menu-ico:before, .menu-ico:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  border-bottom: 1px solid #F7F9FB;
+  -ms-transform-origin: 0 0;
+  transform-origin: 0 0;
+  transition: transform 0.2s linear;
+}
+
+.menu-ico:after {
+  bottom: 0;
+}
+
+.menu-ico span {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  margin-top: -0.5px;
+  border-bottom: 1px solid #F7F9FB;
+  transition: opacity 0.2s linear;
+}
+
+.logo {
+  display: inline-block;
+  margin-left: 15px;
+  font-size: 64px;
+  color: #96C0FF;
+  line-height: 1;
+}
+
+.logo svg {
+  display: block;
+}
+
+.social {
+  display: none;
+  font-size: 0;
+}
+
+.social__option {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.social__option:last-child {
+  margin-right: 0;
+}
+
+.social__link {
+  display: block;
+}
+
+.social__ico {
+  display: block;
+  width: 24px;
+  height: 24px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.social__ico_github {
+  background-image: url(../multicolor-svg/github.svg);
+}
+
+.social__ico_telegram {
+  background-image: url(../multicolor-svg/telegram.svg);
+}
+
+.social__ico_twitter {
+  background-image: url(../multicolor-svg/twitter.svg);
+}
+
+.social__ico_medium {
+  background-image: url(../multicolor-svg/medium.svg);
+}
+
+.hero {
+  position: relative;
+  padding-top: 64px;
+  background: #3b404c;
+}
+
+.hero:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  min-height: 100vmax;
+  background: inherit;
+  -ms-transform: skewY(-25deg);
+  transform: skewY(-25deg);
+  -ms-transform-origin: bottom right;
+  transform-origin: bottom right;
+}
+
+.hero__in {
+  position: relative;
+}
+
+.hero__lead {
+  text-align: center;
+  font-size: 30px;
+  color: #f7f9fb;
+  letter-spacing: -0.7px;
+  line-height: 1.3;
+}
+
+.hero__call {
+  margin-top: 26px;
+  font-size: 64px;
+  font-weight: 300;
+  letter-spacing: 2px;
+  line-height: 1.32;
+}
+
+.megacoin {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-bottom: -50px;
+  padding: 66px 0 164px;
+  background-image: url(../img/megacoin-sm-bg.svg);
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.coin {
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
+  text-align: center;
+  margin-bottom: 53px;
+}
+
+.coin_secure .coin__pic {
+  background-image: url(../multicolor-svg/coins/secure.svg);
+}
+
+.coin_fast .coin__pic {
+  background-image: url(../multicolor-svg/coins/fast.svg);
+}
+
+.coin_cheap .coin__pic {
+  background-image: url(../multicolor-svg/coins/cheap.svg);
+}
+
+.coin_optimized .coin__pic {
+  background-image: url(../multicolor-svg/coins/optimized.svg);
+}
+
+.coin_versalite .coin__pic {
+  background-image: url(../multicolor-svg/coins/versalite.svg);
+}
+
+.coin_smart .coin__pic {
+  background-image: url(../multicolor-svg/coins/smart.svg);
+}
+
+.coin_efficient .coin__pic {
+  background-image: url(../multicolor-svg/coins/efficient.svg);
+}
+
+.coin_decentralized .coin__pic {
+  background-image: url(../multicolor-svg/coins/decentralized.svg);
+}
+
+.coin_borderless .coin__pic {
+  background-image: url(../multicolor-svg/coins/borderless.svg);
+}
+
+.coin_mob-hidden {
+  display: none;
+}
+
+.coin__pic {
+  position: relative;
+  width: 122px;
+  height: 122px;
+  margin: 0 auto;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.coin__text {
+  font-size: 22px;
+  color: #f7f9fb;
+  letter-spacing: 0.1px;
+  text-shadow: -4px 0px 15px rgba(247, 249, 251, 0.5), 4px 0px 15px rgba(247, 249, 251, 0.5);
+}
+
+@media only screen and (min-width: 375px) {
+
+  .megacoin {
+    margin-bottom: -25px;
+    padding-bottom: 100px;
+  }
+
+  .coin {
+    -ms-flex-preferred-size: 50%;
+    flex-basis: 50%;
   }
 }
 
-@media (max-width: 600px) {
+@media only screen and (min-width: 600px) {
 
-  body {
-    font-size: 16px;
+  .hero:before {
+    -ms-transform: skewY(-20deg);
+    transform: skewY(-20deg);
+  }
+
+  .coin {
+    -ms-flex-preferred-size: 33%;
+    flex-basis: 33%;
+  }
+
+  .coin_mob-hidden {
+    display: block;
+  }
+}
+
+@media only screen and (min-width: 1020px) {
+
+  .header__group_main {
+    display: block;
+  }
+
+  .header__group_token .header__option {
+    display: inline-block;
+    margin-right: 55px;
+  }
+
+  .header__group_token .header__option:last-child {
+    margin-right: 0;
+  }
+
+  .menu-ico {
+    display: none;
+  }
+
+  .logo {
+    margin-left: 0;
+    font-size: 68px;
+  }
+
+  .social {
+    display: block;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+
+  .l-center {
+    max-width: 1388px;
+  }
+}
+
+@media only screen and (min-width: 1640px) {
+
+  .l-center {
+    max-width: 1578px;
   }
 }
 
