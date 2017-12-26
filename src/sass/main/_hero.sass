@@ -121,34 +121,60 @@
 	+rmin($sm)
 		flex-basis: 33%
 	+rmin($sm-to-md)
-		display: none
+		&:not(.coin_sm)
+			display: none
 	&_secure
 		.coin__pic
-			background-image: url(../multicolor-svg/coins/secure.svg)
+			background-image: url(../img/multicolor-svg/coins/secure.svg)
 	&_fast
 		.coin__pic
-			background-image: url(../multicolor-svg/coins/fast.svg)
+			background-image: url(../img/multicolor-svg/coins/fast.svg)
 	&_cheap
 		.coin__pic
-			background-image: url(../multicolor-svg/coins/cheap.svg)
+			background-image: url(../img/multicolor-svg/coins/cheap.svg)
 	&_optimized
 		.coin__pic
-			background-image: url(../multicolor-svg/coins/optimized.svg)
+			background-image: url(../img/multicolor-svg/coins/optimized.svg)
 	&_versalite
 		.coin__pic
-			background-image: url(../multicolor-svg/coins/versalite.svg)
+			background-image: url(../img/multicolor-svg/coins/versalite.svg)
 	&_smart
 		.coin__pic
-			background-image: url(../multicolor-svg/coins/smart.svg)
+			background-image: url(../img/multicolor-svg/coins/smart.svg)
 	&_efficient
 		.coin__pic
-			background-image: url(../multicolor-svg/coins/efficient.svg)
+			background-image: url(../img/multicolor-svg/coins/efficient.svg)
 	&_decentralized
 		.coin__pic
-			background-image: url(../multicolor-svg/coins/decentralized.svg)
+			background-image: url(../img/multicolor-svg/coins/decentralized.svg)
 	&_borderless
 		.coin__pic
-			background-image: url(../multicolor-svg/coins/borderless.svg)
+			background-image: url(../img/multicolor-svg/coins/borderless.svg)
+	&_sm
+		margin-bottom: 0
+		.coin__pic
+			width: 98px
+			height: 98px
+			margin-bottom: -8px
+			+rmin($sm)
+				width: 110px
+				height: 110px
+				margin-bottom: -6px
+			+rmin($lg)
+				width: 122px
+				height: 122px
+		.coin__text
+			text-shadow: none
+			font-size: 28px
+			font-weight: 300
+			color: rgba(247, 249, 251, 0.88)
+			line-height: 1.64
+			+rmin($sm)
+				font-size: 34px
+				line-height: 1.35
+			+rmin($lg)
+				font-size: 37px
+				line-height: 1.24
 	&_mob-hidden
 		display: none
 		+rmin($sm)

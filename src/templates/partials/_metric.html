@@ -1,0 +1,55 @@
+<!-- begin metric -->
+<div class="l-center">
+	<div class="metric">
+		{% set coins = [{
+			name: 'fast',
+			color: 'orange'
+		}, {
+			name: 'decentralized',
+			color: 'pink'
+		}, {
+			name: 'borderless',
+			color: 'blue'
+		}, {
+			name: 'efficient',
+			color: 'green'
+		}] %}
+
+		{% for coin in coins %}
+		<div class="metric__table">
+			<div class="coin coin_{{ coin.name }} coin_sm">
+				<div class="coin__pic"></div>
+				<div class="coin__text">{{ coin.name | capitalize }}</div>
+			</div>
+
+			{% set dataList = [{
+				name: 'Bitcoin 2.0',
+				width: '100%'
+			}, {
+				name: 'LTC',
+				width: '69%'
+			}, {
+				name: 'DASH',
+				width: '55%'
+			}, {
+				name: 'Monero',
+				width: '77%'
+			}, {
+				name: 'BTC',
+				width: '72%'
+			}] %}
+			<div class="metric-data">
+				{% for data in dataList %}
+					<div class="metric-data__bl">
+						<div class="metric-data__el {% if loop.first %}metric-data__el_{{ coin.color }}{% endif %}">
+							<div class="metric-data__graph" style="width: {{ data.width }}"></div>
+							<div class="metric-data__text">{{ data.name }}</div>
+						</div>
+					</div>
+				{% endfor %}
+			</div>
+		</div>
+		{% endfor %}
+	</div>
+</div>
+<!-- end metric -->
