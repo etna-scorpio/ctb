@@ -1,11 +1,45 @@
 <!-- begin hero -->
 <div class="hero">
 	<div class="hero__in">
-		{% include "partials/_megacoin.html" %}
+		<!-- begin megacoin -->
+		<div class="megacoin">
+			{% set coins = [{
+				name: 'secure'
+			}, {
+				name: 'efficient'
+			}, {
+				name: 'borderless',
+				mod: 'mob-hidden'
+			}, {
+				name: 'fast'
+			}, {
+				name: 'cheap'
+			}, {
+				name: 'optimized'
+			}, {
+				name: 'versalite'
+			}, {
+				name: 'decentralized'
+			}, {
+				name: 'smart'
+			}] %}
+
+			{% for coin in coins %}
+			<div class="coin coin_{{ coin.name }} {% if coin.mod %}coin_{{ coin.mod }}{% endif %}">
+				<div class="coin__pic"></div>
+				<div class="coin__text">{{ coin.name | capitalize }}</div>
+			</div>
+			{% endfor %}
+			<picture class="megacoin__img">
+				<source media="(min-width: 1440px)" srcset="img/megacoin-isometric-lg.svg">
+				<img srcset="img/megacoin-isometric-md.svg" alt="megacoin isometric">
+			</picture>
+		</div>
+		<!-- end megacoin -->
 		<div class="l-center">
 			<div class="hero__lead">
 				<p>Are that goals possible in One Blockchain?</p>
-				<p class="hero__call">NO!</p>
+				<div class="hero__call"><div class="title-h1 title-h1_hero">NO!</div></div>
 			</div>
 		</div>
 	</div>

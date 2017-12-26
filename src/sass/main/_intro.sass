@@ -1,0 +1,128 @@
+.intro
+	padding-top: 170px
+	+rmin($xs)
+		padding-top: 200px
+	+rmin($sm-to-md)
+		padding-top: 64px
+	&__title
+		margin-bottom: 24px
+		text-align: center
+		+rmin($sm-to-md)
+			display: flex
+			flex-direction: column
+			align-items: flex-end
+			margin-bottom: 48px
+			text-align: left
+	&__heading
+		+rmin($sm-to-md)
+			width: 50%
+			margin-right: 5px
+	&__img
+		margin-bottom: 37px
+		+rmin($sm-to-md)
+			margin-bottom: 48px
+		+rmin($lg-to-xl)
+			max-width: 1136px
+		+rmin($xl)
+			margin-left: 56px
+		img
+			display: block
+			max-width: 100%
+			margin: 0 auto
+	&__info
+		max-width: 794px
+		margin: 0 auto
+		+rmin($lg)
+			max-width: 1134px
+		+rmin($lg-to-xl)
+			position: relative
+			max-width: initial
+	&__bl
+		margin-bottom: 12px
+		+rmin($sm-to-md)
+			margin-bottom: 40px
+		+rmin($lg-to-xl)
+			position: absolute
+			bottom: 100%
+			right: 4px
+			width: 33%
+			margin-bottom: 70px
+			text-align: left
+			letter-spacing: -0.9px
+	&__el
+		margin-bottom: 4px
+		text-align: center
+		font-size: 27px
+		letter-spacing: -0.4px
+		color: $steel
+		line-height: 1.3
+		+rmin($sm)
+			font-size: 40px
+			letter-spacing: 0.5px
+		+rmin($sm-to-md)
+			margin-bottom: 12px
+			font-size: 42px
+			font-weight: 300
+			line-height: normal
+			letter-spacing: 0.7px
+		+rmin($lg-to-xl)
+			text-align: left
+			letter-spacing: -0.9px
+		&_colored
+			color: #2e81ff
+	&__group
+		+rmin($lg-to-xl)
+			display: flex
+			align-items: center
+			justify-content: space-between
+	&__text
+		margin-bottom: 28px
+		font-size: 21px
+		text-align: justify
+		color: $midnight
+		line-height: 1.35
+		letter-spacing: -0.4px
+		+rmin($sm)
+			margin-bottom: 56px
+			font-size: 30px
+		+rmin($sm-to-md)
+			text-align: justify
+			font-size: 34px
+			font-weight: 300
+			line-height: 1.29
+			letter-spacing: -0.3px
+		+rmin($lg)
+			font-size: 36px
+			line-height: 1.33
+		+rmin($lg-to-xl)
+			flex-basis: 58%
+	&__desc
+		display: inline-block
+		margin-bottom: 26px
+		text-align: center
+		font-size: 30px
+		line-height: 1.33
+		letter-spacing: -0.6px
+		color: $midnight
+		+rmin($sm)
+			font-size: 36px
+			line-height: normal
+			letter-spacing: -0.5px
+		+rmin($sm-to-md)
+			width: 50%
+			text-align: left
+			font-weight: 300
+	&__motto
+		max-width: 340px
+		+rmin($lg)
+			max-width: 400px
+	&__btn
+		margin-bottom: 38px
+		+rmin($sm)
+			margin-bottom: 56px
+		+rmin($sm-to-md)
+			margin-bottom: 72px
+		+rmin($lg-to-xl)
+			flex-basis: 33%
+			margin-left: 50px
+

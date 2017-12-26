@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="874px" height="620px" viewBox="0 0 874 620" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47 (45396) - http://www.bohemiancoding.com/sketch -->
+    <title>Mega coin L</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="70.0210955%" y1="92.85%" x2="33.9785648%" y2="-5.23515625%" id="linearGradient-1">
+            <stop stop-color="#000000" stop-opacity="0.12" offset="0%"></stop>
+            <stop stop-color="#000000" stop-opacity="0.0132755888" offset="100%"></stop>
+        </linearGradient>
+        <filter x="-10.8%" y="-15.7%" width="121.7%" height="131.4%" filterUnits="objectBoundingBox" id="filter-2">
+            <feGaussianBlur stdDeviation="30" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <linearGradient x1="13.6430307%" y1="79.0449797%" x2="81.5153468%" y2="13.4823966%" id="linearGradient-3">
+            <stop stop-color="#000000" stop-opacity="0.02" offset="0%"></stop>
+            <stop stop-color="#000000" stop-opacity="0.0132755888" offset="100%"></stop>
+        </linearGradient>
+        <path d="M747.021918,442.783979 C576.931907,540.40534 300.222051,540.40534 129.023355,442.783979 C-42.2562663,345.114231 -43.0817102,186.855528 127.008301,89.2341672 C297.098312,-8.38719393 573.727242,-8.43558122 745.006863,89.2341672 C916.205559,186.855528 917.111929,345.154553 747.021918,442.783979 Z" id="path-4"></path>
+        <path d="M747.021918,426.783979 C576.931907,524.40534 300.222051,524.40534 129.023355,426.783979 C-42.2562663,329.114231 -43.0817102,170.855528 127.008301,73.2341672 C297.098312,-24.3871939 573.727242,-24.4355812 745.006863,73.2341672 C916.205559,170.855528 917.111929,329.154553 747.021918,426.783979 Z" id="path-5"></path>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Mega-coin-L">
+            <path d="M731.414407,569.168786 C569.88728,662.532358 307.107897,619.305361 144.5279,491.085836 C-18.1289485,373.038038 -18.9128369,216.785862 142.61429,123.542012 C304.141418,20.1370977 566.843948,16.8439761 729.500797,134.77155 C892.080794,262.870485 892.941534,465.633822 731.414407,569.168786 Z" id="Fill-1" fill="url(#linearGradient-1)" style="mix-blend-mode: multiply;" filter="url(#filter-2)"></path>
+            <g id="Fill-1">
+                <use fill-opacity="0.0600000024" fill="#CDD2D9" style="mix-blend-mode: lighten;" xlink:href="#path-4"></use>
+                <use fill="url(#linearGradient-3)" xlink:href="#path-4"></use>
+            </g>
+            <g id="Fill-1">
+                <use fill-opacity="0.0899999961" fill="#CDD2D9" style="mix-blend-mode: lighten;" xlink:href="#path-5"></use>
+                <use fill="url(#linearGradient-3)" xlink:href="#path-5"></use>
+            </g>
+        </g>
+    </g>
+</svg>

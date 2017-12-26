@@ -95,6 +95,31 @@ a {
   padding: 0 12px;
 }
 
+.title-h1 {
+  font-size: 64px;
+  font-weight: 300;
+  line-height: 1.32;
+}
+
+.title-h1_hero {
+  letter-spacing: 2px;
+}
+
+.button {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  padding: 17px 10px;
+  font-size: 34px;
+  color: #f7f9fb;
+  background: #2e81ff;
+  line-height: 1.1;
+}
+
+.button:hover {
+  background: #0063fa;
+}
+
 .header {
   position: fixed;
   z-index: 10;
@@ -264,22 +289,30 @@ a {
 .hero {
   position: relative;
   padding-top: 64px;
-  background: #3b404c;
 }
 
-.hero:before {
+.hero:before, .hero:after {
   content: "";
   position: absolute;
   z-index: -1;
-  bottom: 0;
   width: 100%;
   height: 100%;
   min-height: 100vmax;
-  background: inherit;
-  -ms-transform: skewY(-25deg);
-  transform: skewY(-25deg);
-  -ms-transform-origin: bottom right;
-  transform-origin: bottom right;
+  background: #3b404c;
+  -ms-transform: skewY(-27deg);
+  transform: skewY(-27deg);
+  -ms-transform-origin: 100% 0;
+  transform-origin: 100% 0;
+}
+
+.hero:before {
+  bottom: 50%;
+  -ms-transform-origin: 100% 0;
+  transform-origin: 100% 0;
+}
+
+.hero:after {
+  bottom: 1%;
 }
 
 .hero__in {
@@ -287,6 +320,7 @@ a {
 }
 
 .hero__lead {
+  position: relative;
   text-align: center;
   font-size: 30px;
   color: #f7f9fb;
@@ -296,23 +330,34 @@ a {
 
 .hero__call {
   margin-top: 26px;
-  font-size: 64px;
-  font-weight: 300;
-  letter-spacing: 2px;
-  line-height: 1.32;
 }
 
 .megacoin {
+  position: relative;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  margin-bottom: -50px;
+  margin-bottom: -90px;
   padding: 66px 0 164px;
+  overflow: hidden;
+}
+
+.megacoin:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -15%;
+  width: 130%;
+  height: 100%;
   background-image: url(../img/megacoin-sm-bg.svg);
   background-position: center bottom;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.megacoin__img {
+  display: none;
 }
 
 .coin {
@@ -378,24 +423,125 @@ a {
   text-shadow: -4px 0px 15px rgba(247, 249, 251, 0.5), 4px 0px 15px rgba(247, 249, 251, 0.5);
 }
 
+.intro {
+  padding-top: 170px;
+}
+
+.intro__title {
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.intro__img {
+  margin-bottom: 37px;
+}
+
+.intro__img img {
+  display: block;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.intro__info {
+  max-width: 794px;
+  margin: 0 auto;
+}
+
+.intro__bl {
+  margin-bottom: 12px;
+}
+
+.intro__el {
+  margin-bottom: 4px;
+  text-align: center;
+  font-size: 27px;
+  letter-spacing: -0.4px;
+  color: #898e96;
+  line-height: 1.3;
+}
+
+.intro__el_colored {
+  color: #2e81ff;
+}
+
+.intro__text {
+  margin-bottom: 28px;
+  font-size: 21px;
+  text-align: justify;
+  color: #01060d;
+  line-height: 1.35;
+  letter-spacing: -0.4px;
+}
+
+.intro__desc {
+  display: inline-block;
+  margin-bottom: 26px;
+  text-align: center;
+  font-size: 30px;
+  line-height: 1.33;
+  letter-spacing: -0.6px;
+  color: #01060d;
+}
+
+.intro__motto {
+  max-width: 340px;
+}
+
+.intro__btn {
+  margin-bottom: 38px;
+}
+
 @media only screen and (min-width: 375px) {
+
+  .hero:after {
+    bottom: 3%;
+  }
+
+  .hero__lead {
+    padding: 0 20px;
+  }
 
   .megacoin {
     margin-bottom: -25px;
-    padding-bottom: 100px;
+    padding-bottom: 95px;
   }
 
   .coin {
     -ms-flex-preferred-size: 50%;
     flex-basis: 50%;
   }
+
+  .intro {
+    padding-top: 200px;
+  }
 }
 
 @media only screen and (min-width: 600px) {
 
-  .hero:before {
-    -ms-transform: skewY(-20deg);
-    transform: skewY(-20deg);
+  .title-h1 {
+    font-size: 74px;
+    letter-spacing: 2.3px;
+  }
+
+  .button {
+    font-size: 40px;
+    line-height: 1.15;
+  }
+
+  .hero:after {
+    bottom: 8%;
+  }
+
+  .hero__lead {
+    max-width: 385px;
+    margin: 0 auto;
+    padding: 0;
+    font-size: 36px;
+  }
+
+  .megacoin:before {
+    left: -25%;
+    width: 150%;
   }
 
   .coin {
@@ -406,9 +552,147 @@ a {
   .coin_mob-hidden {
     display: block;
   }
+
+  .intro__el {
+    font-size: 40px;
+    letter-spacing: 0.5px;
+  }
+
+  .intro__text {
+    margin-bottom: 56px;
+    font-size: 30px;
+  }
+
+  .intro__desc {
+    font-size: 36px;
+    line-height: normal;
+    letter-spacing: -0.5px;
+  }
+
+  .intro__btn {
+    margin-bottom: 56px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+
+  .title-h1_hero {
+    font-size: 120px;
+    font-weight: 100;
+    line-height: normal;
+    letter-spacing: -1.7px;
+  }
+
+  .title-h1_bitcoin {
+    letter-spacing: -0.6px;
+  }
+
+  .hero:before, .hero:after {
+    -ms-transform: skewY(-30deg);
+    transform: skewY(-30deg);
+  }
+
+  .hero:after {
+    bottom: 26%;
+  }
+
+  .hero__lead {
+    max-width: 508px;
+    margin: 0 0 0	36px;
+    text-align: left;
+    font-size: 48px;
+    font-weight: 300;
+    line-height: 1.33;
+    letter-spacing: -0.6px;
+  }
+
+  .hero__call {
+    margin: 32px 0 0 -7px;
+  }
+
+  .megacoin {
+    margin-bottom: -258px;
+    padding: 40px 0 0;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+
+  .megacoin:before {
+    display: none;
+  }
+
+  .megacoin__img {
+    display: block;
+  }
+
+  .coin {
+    display: none;
+  }
+
+  .intro {
+    padding-top: 64px;
+  }
+
+  .intro__title {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-align: end;
+    align-items: flex-end;
+    margin-bottom: 48px;
+    text-align: left;
+  }
+
+  .intro__heading {
+    width: 50%;
+    margin-right: 5px;
+  }
+
+  .intro__img {
+    margin-bottom: 48px;
+  }
+
+  .intro__bl {
+    margin-bottom: 40px;
+  }
+
+  .intro__el {
+    margin-bottom: 12px;
+    font-size: 42px;
+    font-weight: 300;
+    line-height: normal;
+    letter-spacing: 0.7px;
+  }
+
+  .intro__text {
+    text-align: justify;
+    font-size: 34px;
+    font-weight: 300;
+    line-height: 1.29;
+    letter-spacing: -0.3px;
+  }
+
+  .intro__desc {
+    width: 50%;
+    text-align: left;
+    font-weight: 300;
+  }
+
+  .intro__btn {
+    margin-bottom: 72px;
+  }
 }
 
 @media only screen and (min-width: 1020px) {
+
+  .title-h1 {
+    font-size: 72px;
+  }
+
+  .title-h1_hero {
+    font-size: 120px;
+  }
 
   .header__group_main {
     display: block;
@@ -435,6 +719,19 @@ a {
   .social {
     display: block;
   }
+
+  .hero:before, .hero:after {
+    -ms-transform: skewY(-27deg);
+    transform: skewY(-27deg);
+  }
+
+  .hero:after {
+    bottom: 30%;
+  }
+
+  .hero__lead {
+    margin-left: 44px;
+  }
 }
 
 @media only screen and (min-width: 1200px) {
@@ -442,12 +739,112 @@ a {
   .l-center {
     max-width: 1388px;
   }
+
+  .hero:before {
+    display: none;
+  }
+
+  .hero:after {
+    bottom: 45%;
+  }
+
+  .hero__lead {
+    margin-left: 166px;
+  }
+
+  .intro__info {
+    max-width: 1134px;
+  }
+
+  .intro__text {
+    font-size: 36px;
+    line-height: 1.33;
+  }
+
+  .intro__motto {
+    max-width: 400px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+
+  .button_token {
+    padding: 38px 20px;
+  }
+
+  .hero:after {
+    bottom: 50%;
+  }
+
+  .megacoin {
+    margin-bottom: -230px;
+    padding-top: 38px;
+  }
+
+  .megacoin__img {
+    width: 100%;
+    max-width: 1018px;
+    margin-left: 40px;
+  }
+
+  .intro__img {
+    max-width: 1136px;
+  }
+
+  .intro__info {
+    position: relative;
+    max-width: initial;
+  }
+
+  .intro__bl {
+    position: absolute;
+    bottom: 100%;
+    right: 4px;
+    width: 33%;
+    margin-bottom: 70px;
+    text-align: left;
+    letter-spacing: -0.9px;
+  }
+
+  .intro__el {
+    text-align: left;
+    letter-spacing: -0.9px;
+  }
+
+  .intro__group {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+
+  .intro__text {
+    -ms-flex-preferred-size: 58%;
+    flex-basis: 58%;
+  }
+
+  .intro__btn {
+    -ms-flex-preferred-size: 33%;
+    flex-basis: 33%;
+    margin-left: 50px;
+  }
 }
 
 @media only screen and (min-width: 1640px) {
 
   .l-center {
     max-width: 1578px;
+  }
+
+  .header__group_main {
+    -ms-flex-preferred-size: 440px;
+    flex-basis: 440px;
+  }
+
+  .intro__img {
+    margin-left: 56px;
   }
 }
 

@@ -15,3 +15,44 @@ a
 		max-width: 1388px
 	+rmin($xl)
 		max-width: 1578px
+
+.title-h1
+	font-size: 64px
+	font-weight: 300
+	line-height: 1.32
+	+rmin($sm)
+		font-size: 74px
+		letter-spacing: 2.3px
+	+rmin($md)
+		font-size: 72px
+	&_hero
+		letter-spacing: 2px
+		+rmin($sm-to-md)
+			font-size: 120px
+			font-weight: 100
+			line-height: normal
+			letter-spacing: -1.7px
+		+rmin($md)
+			font-size: 120px
+	&_bitcoin
+		+rmin($sm-to-md)
+			letter-spacing: -0.6px
+
+.button
+	display: inline-block
+	width: 100%
+	text-align: center
+	padding: 17px 10px
+	font-size: 34px
+	color: $pale-grey
+	background: #2e81ff
+	line-height: 1.1
+	+rmin($sm)
+		font-size: 40px
+		line-height: 1.15
+	&:hover
+		background: darken(#2e81ff, 10%)
+	&_token
+		+rmin($lg-to-xl)
+			// min-width: 447px
+			padding: 38px 20px
