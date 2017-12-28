@@ -1,55 +1,91 @@
 <!-- begin metric -->
-<div class="l-center">
-	<div class="metric">
-		{% set coins = [{
-			name: 'fast',
-			color: 'orange'
-		}, {
-			name: 'decentralized',
-			color: 'pink'
-		}, {
-			name: 'borderless',
-			color: 'blue'
-		}, {
-			name: 'efficient',
-			color: 'green'
-		}] %}
-
-		{% for coin in coins %}
-		<div class="metric__table">
-			<div class="coin coin_{{ coin.name }} coin_sm">
-				<div class="coin__pic"></div>
-				<div class="coin__text">{{ coin.name | capitalize }}</div>
-			</div>
-
-			{% set dataList = [{
-				name: 'Bitcoin 2.0',
-				width: '100%'
+<div class="metric">
+	<div class="l-center">
+		<div class="metric__inner">
+			{% set coins = [{
+				name: 'fast',
+				color: 'orange'
 			}, {
-				name: 'LTC',
-				width: '69%'
+				name: 'decentralized',
+				color: 'pink'
 			}, {
-				name: 'DASH',
-				width: '55%'
+				name: 'borderless',
+				color: 'blue'
 			}, {
-				name: 'Monero',
-				width: '77%'
-			}, {
-				name: 'BTC',
-				width: '72%'
+				name: 'efficient',
+				color: 'green'
 			}] %}
-			<div class="metric-data">
-				{% for data in dataList %}
-					<div class="metric-data__bl">
-						<div class="metric-data__el {% if loop.first %}metric-data__el_{{ coin.color }}{% endif %}">
-							<div class="metric-data__graph" style="width: {{ data.width }}"></div>
-							<div class="metric-data__text">{{ data.name }}</div>
+
+			{% for coin in coins %}
+			<div class="metric__table">
+				<div class="coin coin_{{ coin.name }} coin_sm">
+					<div class="coin__pic"></div>
+					<div class="coin__text">{{ coin.name | capitalize }}</div>
+				</div>
+
+				{% set dataList = [{
+					name: 'Bitcoin 2.0',
+					width: '100%'
+				}, {
+					name: 'LTC',
+					width: '69%'
+				}, {
+					name: 'DASH',
+					width: '55%'
+				}, {
+					name: 'Monero',
+					width: '77%'
+				}, {
+					name: 'BTC',
+					width: '72%'
+				}] %}
+				<div class="metric-data">
+					{% for data in dataList %}
+						<div class="metric-data__bl">
+							<div class="metric-data__el {% if loop.first %}metric-data__el_{{ coin.color }}{% endif %}">
+								<div class="metric-data__graph" style="width: {{ data.width }}"></div>
+								<div class="metric-data__text">{{ data.name }}</div>
+							</div>
+						</div>
+					{% endfor %}
+				</div>
+			</div>
+			{% endfor %}
+
+			<!-- begin forecast -->
+			<div class="forecast">
+				<div class="forecast__title">Known Forecasts</div>
+				{% set forecast = [{
+					phrase: 'Bitcoin price = $100,000',
+					text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua'
+				}, {
+					phrase: 'Bitcoin kills other networks',
+					text: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium'
+				}, {
+					phrase: 'Bitcoin will die because energy problem',
+					text: 'Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit'
+				}, {
+					phrase: 'Bitcoin is a hype',
+					text: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur'
+				}] %}
+
+				<div class="forecast__wrap">
+					{% for block in forecast %}
+					<div class="forecast__bl">
+						<div class="forecast__el">
+							<div class="forecast__statement">{{ block.phrase }}</div>
+						</div>
+						<div class="forecast__info">
+							<div class="forecast__highlight"><span>Not true</span></div>
+							<div>{{ block.text }}</div>
 						</div>
 					</div>
-				{% endfor %}
+					{% endfor %}
+				</div>
+				<!-- end forecast -->
+				<div class="forecast__button"><a href="#" class="button">Get token</a></div>
 			</div>
 		</div>
-		{% endfor %}
 	</div>
 </div>
 <!-- end metric -->

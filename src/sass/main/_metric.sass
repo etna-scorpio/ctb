@@ -1,18 +1,21 @@
 .metric
-	margin: 0 -12px
-	padding: 59px 12px
-	background-color: $charcoal-grey
-	+rmin($sm-to-md)
-		margin: 0
-		padding: 84px 32px
-	+rmin($md)
-		padding: 84px 80px
-	+rmin($lg)
-		padding: 92px 114px
-	+rmin($lg-to-xl)
-		display: flex
-		flex-wrap: wrap
-		padding: 92px 28px
+	&__inner
+		margin: 0 -12px
+		padding: 59px 12px 12px
+		background-color: $charcoal-grey
+		+rmin($sm)
+			margin: 0
+			padding: 59px 24px 24px
+		+rmin($sm-to-md)
+			padding: 84px 32px 32px
+		+rmin($md-to-lg)
+			padding: 84px 80px 80px
+		+rmin($lg)
+			padding: 92px 114px 80px
+		+rmin($lg-to-xl)
+			display: flex
+			flex-wrap: wrap
+			padding: 92px 28px 96px
 	&__table
 		margin-bottom: 52px
 		+rmin($lg-to-xl)
@@ -64,3 +67,130 @@
 			font-weight: 500
 			line-height: 1.23
 			letter-spacing: -0.4px
+
+
+.forecast
+	width: 100%
+	margin-top: 66px
+	+rmin($md)
+		margin-top: 72px
+	+rmin($lg-to-xl)
+		margin-top: 28px
+	&__wrap
+		margin-bottom: 8px
+		+rmin($sm)
+			margin-bottom: 74px
+		+rmin($sm-to-md)
+			margin-bottom: 80px
+		+rmin($lg-to-xl)
+			display: flex
+			flex-wrap: wrap
+			margin-bottom: 20px
+	&__title
+		margin-bottom: 40px
+		text-align: center
+		font-size: 37px
+		line-height: 1.35
+		letter-spacing: -0.5px
+		color: rgba($pale-grey, 0.88)
+		+rmin($sm)
+			font-size: 54px
+			font-weight: 100
+			letter-spacing: -0.8px
+		+rmin($sm-to-md)
+			margin-bottom: 58px
+			font-size: 62px
+			font-weight: 300
+			line-height: 1.23
+			letter-spacing: -0.9px
+	&__bl
+		display: flex
+		flex-wrap: wrap
+		margin-bottom: 40px
+		text-align: center
+		font-size: 17px
+		color: rgba($pale-grey, 0.88)
+		line-height: 1.41
+		letter-spacing: -0.3px
+		+rmin($sm)
+			text-align: left
+		+rmin($sm-to-md)
+			margin-bottom: 44px
+		+rmin($md)
+			margin-bottom: 68px
+		+rmin($lg)
+			margin-bottom: 92px
+		+rmin($lg-to-xl)
+			flex-basis: 50%
+			margin-bottom: 68px
+			padding: 0 28px
+	&__el
+		flex-basis: 100%
+		margin-bottom: 12px
+		+rmin($sm)
+			flex-basis: 33%
+			line-height: 1.33
+	&__statement
+		font-size: 21px
+		font-weight: 500
+		color: $pale-grey
+		+rmin($sm-to-md)
+			padding-right: 20px
+			font-size: 26px
+			font-weight: 500
+			line-height: 1.35
+			letter-spacing: -0.4px
+		+rmin($md)
+			max-width: 274px
+		+rmin($lg)
+			padding-right: 0
+	&__info
+		flex-basis: 100%
+		+rmin($sm)
+			flex-basis: 66%
+			padding-left: 30px
+		+rmin($lg-to-xl)
+			padding-left: 50px
+	&__highlight
+		position: relative
+		margin-bottom: 12px
+		font-size: 0
+		color: #f5a623
+		+rmin($sm)
+			margin-bottom: 4px
+		+rmin($sm-to-md)
+			margin-bottom: 6px
+		&:before
+			content: ""
+			display: inline-block
+			vertical-align: middle
+			width: 24px
+			height: 3px
+			border-radius: 3px
+			background: $cool-grey
+			+rotate(-65.5)
+			+rmin($sm)
+				position: absolute
+				top: -1px
+				right: 100%
+				width: 116px
+				height: 3px
+				margin-right: 10px
+				transform-origin: bottom right
+		span
+			vertical-align: middle
+			font-size: 21px
+			font-weight: 300
+			+rmin($sm)
+				font-size: 24px
+				font-weight: 300
+				line-height: 1.58
+			+rmin($sm-to-md)
+				font-size: 29px
+				line-height: 1.31
+				letter-spacing: -0.4px
+	&__button
+		+rmin($lg-to-xl)
+			padding: 0 75px
+		+rmin($xl)
+			padding: 0 91px

@@ -1,0 +1,64 @@
+<!-- begin features -->
+<div class="features">
+	<div class="l-center">
+		<div class="features__ttl">Features</div>
+		<div class="grid grid_features">
+			{% set features = [{
+				title: 'Ut enim ad minima veniam, quis nostrum',
+				icon: 'fast',
+				text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+			}, {
+				title: 'Sed ut perspiciatis unde omnis',
+				icon: 'decentralized',
+				text: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.'
+			}, {
+				title: 'Lorem ipsum dolor sit amet',
+				icon: 'optimized',
+				text: 'Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem'
+			}] %}
+
+			{% for feature in features %}
+			<div class="grid__bl">
+				<div class="grid__pic"><i class="feature-icon feature-icon_{{ feature.icon }}"></i></div>
+				<div class="grid__info">
+					<div class="grid__ttl">{{ feature.title }}</div>
+					<div>{{ feature.text }}</div>
+				</div>
+			</div>
+			{% endfor %}
+		</div>
+		<div class="features__ttl">Use Cases</div>
+		<div class="grid grid_cases">
+			{% set cases = [{
+				text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+				icon: 'first'
+			}, {
+				text: 'Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt',
+				icon: 'second'
+			}, {
+				text: 'Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus',
+				icon: 'third'
+			}, {
+				text: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+				icon: 'forth'
+			}, {
+				text: 'Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem',
+				icon: 'fifth'
+			}, {
+				text: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.',
+				icon: 'sixth'
+			}] %}
+
+			{% for case in cases %}
+			<div class="grid__bl">
+				<div class="grid__pic grid__pic_sm-mb"><i class="case-icon case-icon_{{ case.icon }}"></i></div>
+				<div class="grid__info">
+					<div>{{ case.text }}</div>
+				</div>
+			</div>
+			{% endfor %}
+		</div>
+		<div class="features__btn"><a href="#" class="button button_sm-font button_white">Download whitepaper</a></div>
+	</div>
+</div>
+<!-- end features -->

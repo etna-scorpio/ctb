@@ -47,6 +47,7 @@ a
 	color: $pale-grey
 	background: #2e81ff
 	line-height: 1.1
+	transition: background 0.2s linear, color 0.2s linear
 	+rmin($sm)
 		font-size: 40px
 		line-height: 1.15
@@ -55,3 +56,15 @@ a
 	&_token
 		+rmin($lg-to-xl)
 			padding: 38px 20px
+	&_white
+		background: #FFF
+		color: #2e81ff
+		&:hover
+			background: #2e81ff
+			color: #fff
+	&_sm-font
+		font-size: 27px
+		letter-spacing: -0.4px
+		+rmin($sm)
+			font-size: 34px
+			letter-spacing: -0.5px
