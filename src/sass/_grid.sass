@@ -1,0 +1,110 @@
+.grid
+	display: flex
+	flex-wrap: wrap
+	&_features
+		+rmin($sm-to-md)
+			margin: 0 -4px 24px
+			.grid__bl
+				flex-basis: 50%
+				padding: 0 16px
+		+rmin($md-to-lg)
+			margin: 0
+			.grid__bl
+				flex-basis: 33%
+				margin-bottom: 56px
+				padding: 0 15px
+	&_cases
+		margin-bottom: 16px
+		+rmin($sm)
+			margin-bottom: 20px
+		+rmin($sm-to-md)
+			margin-bottom: 0
+		+rmin($md-to-lg)
+			margin: 0 -15px 24px
+			.grid__pic
+				float: left
+				margin-right: 7px
+			.grid__info
+				overflow: hidden
+		.grid__bl
+			margin-bottom: 32px
+			+rmin($sm)
+				margin-bottom: 52px
+				padding: 0 24px
+			+rmin($sm-to-md)
+				max-width: 815px
+				margin: 0 auto 64px
+				padding: 0
+			+rmin($md-to-lg)
+				flex-basis: 50%
+				margin-bottom: 48px
+				padding: 0 32px
+				text-align: left
+				+clr
+	&_tech
+		.grid__bl
+			margin-bottom: 60px
+			+rmin($sm)
+				flex-basis: 33%
+				margin-bottom: 42px
+	&__bl
+		flex-basis: 100%
+		margin-bottom: 45px
+		text-align: center
+		font-size: 17px
+		line-height: 1.41
+		letter-spacing: 0.2px
+		color: rgba($charcoal-grey, 0.88)
+		+rmin($sm-to-md)
+			margin-bottom: 48px
+	&__pic
+		margin-bottom: 7px
+		font-size: 0
+		+rmin($sm)
+			margin-bottom: 11px
+		&_sm-mb
+			margin-bottom: 10px
+	&__subtitle
+		margin-bottom: 34px
+		font-size: 19px
+		font-weight: 500
+		text-align: center
+		letter-spacing: -0.5px
+		line-height: 1.26
+		color: rgba(#f5a623, 0.8)
+	&__ttl
+		margin-bottom: 12px
+		font-size: 19px
+		font-weight: 500
+		line-height: 1.26
+		letter-spacing: -0.1px
+		color: $midnight
+		+rmin($sm)
+			font-size: 24px
+			margin-bottom: 16px
+		+rmin($sm-to-md)
+			margin-bottom: 28px
+			font-size: 19px
+			font-weight: 500
+			line-height: 1.26
+			letter-spacing: -0.1px
+		+rmin($md-to-lg)
+			min-height: 48px
+			margin-bottom: 4px
+		+rmin($lg-to-xl)
+			min-height: auto
+			margin-bottom: 28px
+	&__img
+		display: block
+		max-width: 100%
+		margin: 0 auto
+		&_ethereum
+			max-width: 173px
+		&_circle
+			max-width: 97px
+			+rmin($sm)
+				padding-top: 9px
+		&_parity
+			max-width: 147px
+			+rmin($sm)
+				padding-top: 5px

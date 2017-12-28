@@ -30,6 +30,10 @@
 		+rmin($md-to-lg)
 			margin-bottom: 48px
 	&__btn
+		+rmin($sm-to-md)
+			padding: 0 36px
+		+rmin($md)
+			padding: 0 75px
 		+rmin($md-to-lg)
 			padding: 0 80px
 		+rmin($lg)
@@ -68,87 +72,3 @@
 			background-image: url(../img/multicolor-svg/cases/case-sm-#{$index}.svg)
 			+rmin($md-to-lg)
 				background-image: url(../img/multicolor-svg/cases/case-lg-#{$index}.svg)
-
-.grid
-	display: flex
-	flex-wrap: wrap
-	&_features
-		+rmin($sm-to-md)
-			margin: 0 -4px 24px
-			.grid__bl
-				flex-basis: 50%
-				padding: 0 16px
-		+rmin($md-to-lg)
-			margin: 0
-			.grid__bl
-				flex-basis: 33%
-				margin-bottom: 56px
-				padding: 0 15px
-	&_cases
-		margin-bottom: 16px
-		+rmin($sm)
-			margin-bottom: 20px
-		+rmin($sm-to-md)
-			margin-bottom: 0
-		+rmin($md-to-lg)
-			margin: 0 -15px 24px
-			.grid__pic
-				float: left
-				margin-right: 7px
-			.grid__info
-				overflow: hidden
-		.grid__bl
-			margin-bottom: 32px
-			+rmin($sm)
-				margin-bottom: 52px
-				padding: 0 24px
-			+rmin($sm-to-md)
-				max-width: 815px
-				margin: 0 auto 64px
-				padding: 0
-			+rmin($md-to-lg)
-				flex-basis: 50%
-				margin-bottom: 48px
-				padding: 0 32px
-				text-align: left
-				+clr
-	&__bl
-		flex-basis: 100%
-		margin-bottom: 45px
-		text-align: center
-		font-size: 17px
-		line-height: 1.41
-		letter-spacing: 0.2px
-		color: rgba($charcoal-grey, 0.88)
-		+rmin($sm-to-md)
-			margin-bottom: 48px
-	&__pic
-		margin-bottom: 7px
-		font-size: 0
-		+rmin($sm)
-			margin-bottom: 11px
-		&_sm-mb
-			margin-bottom: 10px
-	&__ttl
-		margin-bottom: 12px
-		font-size: 19px
-		font-weight: 500
-		line-height: 1.26
-		letter-spacing: -0.1px
-		color: $midnight
-		+rmin($sm)
-			font-size: 24px
-			margin-bottom: 16px
-		+rmin($sm-to-md)
-			margin-bottom: 28px
-			font-size: 19px
-			font-weight: 500
-			line-height: 1.26
-			letter-spacing: -0.1px
-		+rmin($md-to-lg)
-			min-height: 48px
-			margin-bottom: 4px
-		+rmin($lg-to-xl)
-			min-height: auto
-			margin-bottom: 28px
-

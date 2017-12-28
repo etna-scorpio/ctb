@@ -136,6 +136,82 @@ a {
   letter-spacing: -0.4px;
 }
 
+.grid {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.grid_cases {
+  margin-bottom: 16px;
+}
+
+.grid_cases .grid__bl {
+  margin-bottom: 32px;
+}
+
+.grid_tech .grid__bl {
+  margin-bottom: 60px;
+}
+
+.grid__bl {
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
+  margin-bottom: 45px;
+  text-align: center;
+  font-size: 17px;
+  line-height: 1.41;
+  letter-spacing: 0.2px;
+  color: rgba(59, 64, 76, 0.88);
+}
+
+.grid__pic {
+  margin-bottom: 7px;
+  font-size: 0;
+}
+
+.grid__pic_sm-mb {
+  margin-bottom: 10px;
+}
+
+.grid__subtitle {
+  margin-bottom: 34px;
+  font-size: 19px;
+  font-weight: 500;
+  text-align: center;
+  letter-spacing: -0.5px;
+  line-height: 1.26;
+  color: rgba(245, 166, 35, 0.8);
+}
+
+.grid__ttl {
+  margin-bottom: 12px;
+  font-size: 19px;
+  font-weight: 500;
+  line-height: 1.26;
+  letter-spacing: -0.1px;
+  color: #01060d;
+}
+
+.grid__img {
+  display: block;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.grid__img_ethereum {
+  max-width: 173px;
+}
+
+.grid__img_circle {
+  max-width: 97px;
+}
+
+.grid__img_parity {
+  max-width: 147px;
+}
+
 .header {
   position: fixed;
   z-index: 10;
@@ -730,48 +806,10 @@ a {
   background-image: url(../img/multicolor-svg/cases/case-sm-6.svg);
 }
 
-.grid {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-}
-
-.grid_cases {
-  margin-bottom: 16px;
-}
-
-.grid_cases .grid__bl {
-  margin-bottom: 32px;
-}
-
-.grid__bl {
-  -ms-flex-preferred-size: 100%;
-  flex-basis: 100%;
-  margin-bottom: 45px;
-  text-align: center;
-  font-size: 17px;
-  line-height: 1.41;
-  letter-spacing: 0.2px;
-  color: rgba(59, 64, 76, 0.88);
-}
-
-.grid__pic {
-  margin-bottom: 7px;
-  font-size: 0;
-}
-
-.grid__pic_sm-mb {
-  margin-bottom: 10px;
-}
-
-.grid__ttl {
-  margin-bottom: 12px;
-  font-size: 19px;
-  font-weight: 500;
-  line-height: 1.26;
-  letter-spacing: -0.1px;
-  color: #01060d;
+.tech__inner {
+  margin: 0 -12px;
+  padding-top: 48px;
+  background: #3b404c;
 }
 
 @media only screen and (min-width: 375px) {
@@ -814,6 +852,38 @@ a {
   .button_sm-font {
     font-size: 34px;
     letter-spacing: -0.5px;
+  }
+
+  .grid_cases {
+    margin-bottom: 20px;
+  }
+
+  .grid_cases .grid__bl {
+    margin-bottom: 52px;
+    padding: 0 24px;
+  }
+
+  .grid_tech .grid__bl {
+    -ms-flex-preferred-size: 33%;
+    flex-basis: 33%;
+    margin-bottom: 42px;
+  }
+
+  .grid__pic {
+    margin-bottom: 11px;
+  }
+
+  .grid__ttl {
+    font-size: 24px;
+    margin-bottom: 16px;
+  }
+
+  .grid__img_circle {
+    padding-top: 9px;
+  }
+
+  .grid__img_parity {
+    padding-top: 5px;
   }
 
   .hero:after {
@@ -956,22 +1026,9 @@ a {
     height: 87px;
   }
 
-  .grid_cases {
-    margin-bottom: 20px;
-  }
-
-  .grid_cases .grid__bl {
-    margin-bottom: 52px;
-    padding: 0 24px;
-  }
-
-  .grid__pic {
-    margin-bottom: 11px;
-  }
-
-  .grid__ttl {
-    font-size: 24px;
-    margin-bottom: 16px;
+  .tech__inner {
+    margin: 0;
+    padding-top: 42px;
   }
 }
 
@@ -986,6 +1043,38 @@ a {
 
   .title-h1_bitcoin {
     letter-spacing: -0.6px;
+  }
+
+  .grid_features {
+    margin: 0 -4px 24px;
+  }
+
+  .grid_features .grid__bl {
+    -ms-flex-preferred-size: 50%;
+    flex-basis: 50%;
+    padding: 0 16px;
+  }
+
+  .grid_cases {
+    margin-bottom: 0;
+  }
+
+  .grid_cases .grid__bl {
+    max-width: 815px;
+    margin: 0 auto 64px;
+    padding: 0;
+  }
+
+  .grid__bl {
+    margin-bottom: 48px;
+  }
+
+  .grid__ttl {
+    margin-bottom: 28px;
+    font-size: 19px;
+    font-weight: 500;
+    line-height: 1.26;
+    letter-spacing: -0.1px;
   }
 
   .hero:before, .hero:after {
@@ -1133,36 +1222,12 @@ a {
     letter-spacing: -0.9px;
   }
 
-  .grid_features {
-    margin: 0 -4px 24px;
+  .features__btn {
+    padding: 0 36px;
   }
 
-  .grid_features .grid__bl {
-    -ms-flex-preferred-size: 50%;
-    flex-basis: 50%;
-    padding: 0 16px;
-  }
-
-  .grid_cases {
-    margin-bottom: 0;
-  }
-
-  .grid_cases .grid__bl {
-    max-width: 815px;
-    margin: 0 auto 64px;
-    padding: 0;
-  }
-
-  .grid__bl {
-    margin-bottom: 48px;
-  }
-
-  .grid__ttl {
-    margin-bottom: 28px;
-    font-size: 19px;
-    font-weight: 500;
-    line-height: 1.26;
-    letter-spacing: -0.1px;
+  .tech__inner {
+    padding: 42px 4px 0;
   }
 }
 
@@ -1226,9 +1291,61 @@ a {
   .forecast__statement {
     max-width: 274px;
   }
+
+  .features__btn {
+    padding: 0 75px;
+  }
+
+  .tech__inner {
+    padding: 42px 24px 0;
+  }
 }
 
 @media only screen and (min-width: 1024px) {
+
+  .grid_features {
+    margin: 0;
+  }
+
+  .grid_features .grid__bl {
+    -ms-flex-preferred-size: 33%;
+    flex-basis: 33%;
+    margin-bottom: 56px;
+    padding: 0 15px;
+  }
+
+  .grid_cases {
+    margin: 0 -15px 24px;
+  }
+
+  .grid_cases .grid__pic {
+    float: left;
+    margin-right: 7px;
+  }
+
+  .grid_cases .grid__info {
+    overflow: hidden;
+  }
+
+  .grid_cases .grid__bl {
+    -ms-flex-preferred-size: 50%;
+    flex-basis: 50%;
+    margin-bottom: 48px;
+    padding: 0 32px;
+    text-align: left;
+    zoom: 1;
+  }
+
+  .grid_cases .grid__bl:after {
+    content: " ";
+    display: table;
+    clear: both;
+  }
+
+  .grid__ttl {
+    min-height: 48px;
+    margin-bottom: 4px;
+  }
 
   .metric__inner {
     padding: 84px 80px 80px;
@@ -1273,50 +1390,6 @@ a {
 
   .case-icon_sixth {
     background-image: url(../img/multicolor-svg/cases/case-lg-6.svg);
-  }
-
-  .grid_features {
-    margin: 0;
-  }
-
-  .grid_features .grid__bl {
-    -ms-flex-preferred-size: 33%;
-    flex-basis: 33%;
-    margin-bottom: 56px;
-    padding: 0 15px;
-  }
-
-  .grid_cases {
-    margin: 0 -15px 24px;
-  }
-
-  .grid_cases .grid__pic {
-    float: left;
-    margin-right: 7px;
-  }
-
-  .grid_cases .grid__info {
-    overflow: hidden;
-  }
-
-  .grid_cases .grid__bl {
-    -ms-flex-preferred-size: 50%;
-    flex-basis: 50%;
-    margin-bottom: 48px;
-    padding: 0 32px;
-    text-align: left;
-    zoom: 1;
-  }
-
-  .grid_cases .grid__bl:after {
-    content: " ";
-    display: table;
-    clear: both;
-  }
-
-  .grid__ttl {
-    min-height: 48px;
-    margin-bottom: 4px;
   }
 }
 
@@ -1391,6 +1464,11 @@ a {
 
   .button_token {
     padding: 38px 20px;
+  }
+
+  .grid__ttl {
+    min-height: auto;
+    margin-bottom: 28px;
   }
 
   .hero:after {
@@ -1493,9 +1571,8 @@ a {
     padding: 0 75px;
   }
 
-  .grid__ttl {
-    min-height: auto;
-    margin-bottom: 28px;
+  .tech__inner {
+    padding: 42px 26px 0;
   }
 }
 
