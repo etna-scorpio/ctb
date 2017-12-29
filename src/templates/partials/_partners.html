@@ -29,7 +29,9 @@
 
 				{% for partner in partners %}
 				<div class="grid__bl grid__bl_{{ partner.logo }}" {% if partner.hidden %}hidden{% endif %}>
-					<img class="grid__img grid__img_{{ partner.logo }}" src="img/partners/{{ partner.logo }}.png" alt="{{ partner.logo }}">
+					<a href="#">
+						<img class="grid__img grid__img_{{ partner.logo }}" src="img/partners/{{ partner.logo }}.png" alt="{{ partner.logo }}">
+					</a>
 				</div>
 				{% endfor %}
 			</div>

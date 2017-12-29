@@ -1,0 +1,24 @@
+<!-- begin team -->
+<div class="team">
+	<div class="l-center">
+		<div class="team__in">
+			<div class="team__title">Team</div>
+			<div class="grid grid_team">
+				{% set team = ['alien', 'agent', 'afro'] %}
+				{% for i in team %}
+				<div class="grid__bl">
+					<img class="grid__img" src="img/team/{{i}}.svg" alt="{{i}}">
+				</div>
+				{% endfor %}
+			</div>
+			<div class="team__info">
+				<div class="team__subtitle">Welcome Alien, Agent and Afro!</div>
+				<div class="team__text">Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus</div>
+			</div>
+			<div class="team__img" hidden>
+				<img src="img/team/team.svg" alt="team">
+			</div>
+		</div>
+	</div>
+</div>
+<!-- end team -->

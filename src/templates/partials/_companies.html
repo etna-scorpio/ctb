@@ -1,0 +1,33 @@
+<!-- begin companies -->
+<div class="companies">
+	<div class="l-center">
+		<div class="companies__title">Partners</div>
+		<div class="grid grid_companies">
+			{% set companies = [{
+				logo: 'google'
+			}, {
+				logo: 'microsoft',
+				hidden: true
+			},{
+				logo: 'sequoia'
+			}, {
+				logo: 'ey',
+				hidden: true
+			}, {
+				logo: 'horowitz'
+			}, {
+				logo: 'apple',
+				hidden: true
+			}] %}
+
+			{% for company in companies %}
+			<div class="grid__bl grid__bl_{{ company.logo }}" {% if company.hidden %}hidden{% endif %}>
+				<a href="#">
+					<img class="grid__img grid__img_{{ company.logo }}" src="img/companies/{{ company.logo }}.png" alt="{{ company.logo }}">
+				</a>
+			</div>
+			{% endfor %}
+		</div>
+	</div>
+</div>
+<!-- end companies -->

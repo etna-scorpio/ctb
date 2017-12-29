@@ -143,26 +143,6 @@ a {
   flex-wrap: wrap;
 }
 
-.grid_cases {
-  margin-bottom: 16px;
-}
-
-.grid_cases .grid__bl {
-  margin-bottom: 32px;
-}
-
-.grid_tech .grid__bl {
-  margin-bottom: 60px;
-}
-
-.grid_partners .grid__bl {
-  margin-bottom: 74px;
-}
-
-.grid_partners .grid__bl:last-child {
-  margin-bottom: 62px;
-}
-
 .grid__bl {
   -ms-flex-preferred-size: 100%;
   flex-basis: 100%;
@@ -254,6 +234,69 @@ a {
 
 .grid__img_tc {
   max-width: 114px;
+}
+
+.grid__img_google {
+  max-width: 161px;
+}
+
+.grid__img_microsoft {
+  max-width: 192px;
+}
+
+.grid__img_sequoia {
+  max-width: 214px;
+}
+
+.grid__img_ey {
+  max-width: 85px;
+}
+
+.grid__img_horowitz {
+  max-width: 210px;
+}
+
+.grid__img_apple {
+  max-width: 69px;
+}
+
+/* modifiers for different sections */
+
+.grid_cases {
+  margin-bottom: 16px;
+}
+
+.grid_cases .grid__bl {
+  margin-bottom: 32px;
+}
+
+.grid_tech .grid__bl {
+  margin-bottom: 60px;
+}
+
+.grid_partners .grid__bl {
+  margin-bottom: 74px;
+}
+
+.grid_partners .grid__bl:last-child {
+  margin-bottom: 62px;
+}
+
+.grid_companies {
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.grid_companies .grid__bl {
+  margin-bottom: 64px;
+}
+
+.grid_team .grid__bl {
+  margin-bottom: 78px;
+}
+
+.grid_team .grid__bl:last-child {
+  margin-bottom: 51px;
 }
 
 .card-wrap {
@@ -940,6 +983,101 @@ a {
   background: #3b404c;
 }
 
+.companies {
+  padding: 56px 0 8px;
+}
+
+.companies__title {
+  margin-bottom: 56px;
+  text-align: center;
+  font-size: 38px;
+  line-height: 1.32;
+  letter-spacing: -0.6px;
+  color: #2e81ff;
+}
+
+.team__title {
+  margin-bottom: 56px;
+  text-align: center;
+  font-size: 38px;
+  line-height: 1.32;
+  letter-spacing: -0.6px;
+  color: #2e81ff;
+}
+
+.team__info {
+  position: relative;
+  margin-bottom: 46px;
+  text-align: center;
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 1.41;
+  letter-spacing: 0.2px;
+  color: rgba(59, 64, 76, 0.8);
+}
+
+.team__subtitle {
+  margin-bottom: 18px;
+  padding: 0 20px;
+  font-size: 29px;
+  font-weight: 300;
+  line-height: 1.38;
+  letter-spacing: normal;
+  color: rgba(1, 6, 13, 0.88);
+}
+
+.team__img {
+  margin-top: -100px;
+}
+
+.team__img img {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.footer {
+  position: relative;
+  margin-top: 50px;
+  padding-top: 68px;
+  padding-bottom: 68px;
+  background: #d9dee5;
+}
+
+.footer__in {
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+
+.footer__bl {
+  -ms-flex-preferred-size: 65%;
+  flex-basis: 65%;
+}
+
+.footer__copyright {
+  max-width: 230px;
+  margin-bottom: 10px;
+  font-size: 12px;
+  font-weight: 300;
+  opacity: 0.5;
+  line-height: 1.33;
+  color: #01060d;
+}
+
+.footer__link {
+  font-size: 13px;
+  font-weight: 300;
+  line-height: 3.08;
+  color: #2e81ff;
+  border: 1px solid transparent;
+}
+
+.footer__link:hover {
+  border-bottom-color: #2e81ff;
+}
+
 @media only screen and (min-width: 375px) {
 
   .hero:after {
@@ -982,30 +1120,6 @@ a {
     letter-spacing: -0.5px;
   }
 
-  .grid_cases {
-    margin-bottom: 20px;
-  }
-
-  .grid_cases .grid__bl {
-    margin-bottom: 52px;
-    padding: 0 24px;
-  }
-
-  .grid_tech .grid__bl {
-    -ms-flex-preferred-size: 33%;
-    flex-basis: 33%;
-    margin-bottom: 42px;
-  }
-
-  .grid_partners .grid__bl {
-    -ms-flex-preferred-size: 50%;
-    flex-basis: 50%;
-  }
-
-  .grid_partners .grid__bl[hidden] {
-    display: block;
-  }
-
   .grid__pic {
     margin-bottom: 11px;
   }
@@ -1033,6 +1147,61 @@ a {
 
   .grid__img_tc {
     margin-top: -15px;
+  }
+
+  .grid__img_ey {
+    margin-top: -20px;
+  }
+
+  .grid_cases {
+    margin-bottom: 20px;
+  }
+
+  .grid_cases .grid__bl {
+    margin-bottom: 52px;
+    padding: 0 24px;
+  }
+
+  .grid_tech .grid__bl {
+    -ms-flex-preferred-size: 33%;
+    flex-basis: 33%;
+    margin-bottom: 42px;
+  }
+
+  .grid_partners .grid__bl {
+    -ms-flex-preferred-size: 50%;
+    flex-basis: 50%;
+  }
+
+  .grid_partners .grid__bl[hidden] {
+    display: block;
+  }
+
+  .grid_companies .grid__bl {
+    -ms-flex-preferred-size: 50%;
+    flex-basis: 50%;
+  }
+
+  .grid_companies .grid__bl[hidden] {
+    display: block;
+  }
+
+  .grid_team {
+    margin: 0 12px 38px 0;
+    padding: 70px 0 76px;
+    background: #fff;
+    box-shadow: 12px -8px 0 0 #e5e8ee;
+  }
+
+  .grid_team .grid__bl {
+    -ms-flex-preferred-size: 33%;
+    flex-basis: 33%;
+    margin-bottom: 0;
+    padding: 0 12px;
+  }
+
+  .grid_team .grid__bl:last-child {
+    margin-bottom: 0;
   }
 
   .card {
@@ -1214,6 +1383,39 @@ a {
   .partners__inner {
     margin: 0;
   }
+
+  .companies {
+    padding: 64px 0 13px;
+  }
+
+  .companies__title {
+    font-size: 53px;
+    font-weight: 300;
+    line-height: 1.43;
+    letter-spacing: -0.8px;
+  }
+
+  .team__title {
+    margin-bottom: 52px;
+    font-size: 53px;
+    font-weight: 300;
+    line-height: 1.43;
+    letter-spacing: -0.8px;
+  }
+
+  .team__info {
+    max-width: 576px;
+    margin: 0 auto 46px;
+  }
+
+  .team__subtitle {
+    margin-bottom: 14px;
+  }
+
+  .footer__el {
+    display: inline-block;
+    padding-right: 18px;
+  }
 }
 
 @media only screen and (min-width: 768px) {
@@ -1227,6 +1429,30 @@ a {
 
   .title-h1_bitcoin {
     letter-spacing: -0.6px;
+  }
+
+  .grid__bl {
+    margin-bottom: 48px;
+  }
+
+  .grid__ttl {
+    margin-bottom: 28px;
+    font-size: 19px;
+    font-weight: 500;
+    line-height: 1.26;
+    letter-spacing: -0.1px;
+  }
+
+  .grid__img_bitcoin-warrior {
+    margin-top: 0;
+  }
+
+  .grid__img_vb {
+    margin-top: 0;
+  }
+
+  .grid__img_tc {
+    margin-top: 0;
   }
 
   .grid_features {
@@ -1309,28 +1535,8 @@ a {
     margin-bottom: 56px;
   }
 
-  .grid__bl {
-    margin-bottom: 48px;
-  }
-
-  .grid__ttl {
-    margin-bottom: 28px;
-    font-size: 19px;
-    font-weight: 500;
-    line-height: 1.26;
-    letter-spacing: -0.1px;
-  }
-
-  .grid__img_bitcoin-warrior {
-    margin-top: 0;
-  }
-
-  .grid__img_vb {
-    margin-top: 0;
-  }
-
-  .grid__img_tc {
-    margin-top: 0;
+  .grid_team {
+    display: none;
   }
 
   .card-wrap {
@@ -1529,6 +1735,42 @@ a {
   .partners__inner {
     padding: 58px 30px 0;
   }
+
+  .companies {
+    padding: 72px 0 13px;
+  }
+
+  .companies__title {
+    font-size: 60px;
+    font-weight: 100;
+    line-height: 1.27;
+    letter-spacing: -0.9px;
+  }
+
+  .team {
+    padding: 0 5px;
+  }
+
+  .team__info {
+    max-width: 274px;
+    text-align: left;
+    margin: 0;
+    font-weight: 400;
+  }
+
+  .team__subtitle {
+    margin-bottom: 23px;
+    padding: 0;
+  }
+
+  .team__img {
+    display: block;
+  }
+
+  .footer__bl {
+    -ms-flex-preferred-size: 50%;
+    flex-basis: 50%;
+  }
 }
 
 @media only screen and (min-width: 1022px) {
@@ -1616,9 +1858,18 @@ a {
   .partners__inner {
     padding: 65px 30px 0;
   }
+
+  .team__img {
+    margin-top: -200px;
+  }
 }
 
 @media only screen and (min-width: 1024px) {
+
+  .grid__ttl {
+    min-height: 48px;
+    margin-bottom: 4px;
+  }
 
   .grid_features {
     margin: 0;
@@ -1659,9 +1910,29 @@ a {
     clear: both;
   }
 
-  .grid__ttl {
-    min-height: 48px;
-    margin-bottom: 4px;
+  .grid_companies .grid__bl {
+    -ms-flex-preferred-size: 33%;
+    flex-basis: 33%;
+  }
+
+  .grid_companies .grid__bl_ey {
+    -ms-flex-order: 3;
+    order: 3;
+  }
+
+  .grid_companies .grid__bl_horowitz {
+    -ms-flex-order: 4;
+    order: 4;
+  }
+
+  .grid_companies .grid__bl_apple {
+    -ms-flex-order: 5;
+    order: 5;
+  }
+
+  .grid_companies .grid__bl_sequoia {
+    -ms-flex-order: 6;
+    order: 6;
   }
 
   .card-wrap {
@@ -1736,12 +2007,41 @@ a {
   .media__in {
     padding: 0;
   }
+
+  .companies {
+    padding-bottom: 16px;
+  }
+
+  .team {
+    padding: 0 23px;
+  }
+
+  .team__info {
+    max-width: 329px;
+  }
+
+  .team__subtitle {
+    margin-bottom: 18px;
+  }
+
+  .team__img {
+    margin-top: -142px;
+  }
+
+  .team__img img {
+    width: 100%;
+  }
 }
 
 @media only screen and (min-width: 1200px) {
 
   .l-center {
     max-width: 1388px;
+  }
+
+  .grid_companies {
+    max-width: 1134px;
+    margin: 0 auto;
   }
 
   .hero:before {
@@ -1803,6 +2103,15 @@ a {
     max-width: 1314px;
     margin: 0 auto;
   }
+
+  .team {
+    padding: 0;
+  }
+
+  .team__in {
+    max-width: 1134px;
+    margin: 0 auto;
+  }
 }
 
 @media only screen and (min-width: 1440px) {
@@ -1814,6 +2123,30 @@ a {
   .grid__ttl {
     min-height: auto;
     margin-bottom: 28px;
+  }
+
+  .grid__img_microsoft {
+    max-width: 231px;
+  }
+
+  .grid__img_sequoia {
+    max-width: 238px;
+  }
+
+  .grid__img_ey {
+    max-width: 95px;
+  }
+
+  .grid__img_horowitz {
+    max-width: 251px;
+  }
+
+  .grid__img_apple {
+    max-width: 98px;
+  }
+
+  .grid_companies .grid__bl {
+    margin-bottom: 100px;
   }
 
   .card-wrap {
@@ -1941,6 +2274,14 @@ a {
 
   .l-center {
     max-width: 1578px;
+  }
+
+  .grid__img_google {
+    max-width: 189px;
+  }
+
+  .grid_companies {
+    max-width: 100%;
   }
 
   .header__group_main {

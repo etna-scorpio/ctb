@@ -1,90 +1,6 @@
 .grid
 	display: flex
 	flex-wrap: wrap
-	&_features
-		+rmin($sm-to-md)
-			margin: 0 -4px 24px
-			.grid__bl
-				flex-basis: 50%
-				padding: 0 16px
-		+rmin($md-to-lg)
-			margin: 0
-			.grid__bl
-				flex-basis: 33%
-				margin-bottom: 56px
-				padding: 0 15px
-	&_cases
-		margin-bottom: 16px
-		+rmin($sm)
-			margin-bottom: 20px
-		+rmin($sm-to-md)
-			margin-bottom: 0
-		+rmin($md-to-lg)
-			margin: 0 -12px 24px
-			.grid__pic
-				float: left
-				margin-right: 7px
-			.grid__info
-				overflow: hidden
-		.grid__bl
-			margin-bottom: 32px
-			+rmin($sm)
-				margin-bottom: 52px
-				padding: 0 24px
-			+rmin($sm-to-md)
-				max-width: 815px
-				margin: 0 auto 64px
-				padding: 0
-			+rmin($md-to-lg)
-				flex-basis: 50%
-				margin-bottom: 48px
-				padding: 0 32px
-				text-align: left
-				+clr
-	&_tech
-		.grid__bl
-			margin-bottom: 60px
-			+rmin($sm)
-				flex-basis: 33%
-				margin-bottom: 42px
-	&_partners
-		+rmin($sm-to-md)
-			align-items: center
-		.grid__bl
-			margin-bottom: 74px
-			+rmin($sm)
-				flex-basis: 50%
-				&[hidden]
-					display: block
-			+rmin($sm-to-md)
-				flex-basis: 33%
-				margin-bottom: 56px
-				&.grid__bl_forklog
-					order: 0
-				&.grid__bl_huffpost
-					order: 1
-				&.grid__bl_merkle
-					order: 3
-				&.grid__bl_digital-journal
-					order: 4
-				&.grid__bl_bitcoin-warrior
-					order: 5
-				&.grid__bl_tc
-					order: 6
-				&.grid__bl_bitcoinist
-					order: 7
-				&.grid__bl_vb
-					order: 8
-				&.grid__bl_bbc
-					order: 9
-			+rmin($md)
-				margin-bottom: 74px
-			&:last-child
-				margin-bottom: 62px
-				+rmin($sm-to-md)
-					margin-bottom: 56px
-				+rmin($md)
-					margin-bottom: 74px
 	&__bl
 		flex-basis: 100%
 		margin-bottom: 45px
@@ -176,3 +92,160 @@
 				margin-top: -15px
 			+rmin($sm-to-md)
 				margin-top: 0
+		&_google
+			max-width: 161px
+			+rmin($xl)
+				max-width: 189px
+		&_microsoft
+			max-width: 192px
+			+rmin($lg-to-xl)
+				max-width: 231px
+		&_sequoia
+			max-width: 214px
+			+rmin($lg-to-xl)
+				max-width: 238px
+		&_ey
+			max-width: 85px
+			+rmin($sm)
+				margin-top: -20px
+			+rmin($lg-to-xl)
+				max-width: 95px
+		&_horowitz
+			max-width: 210px
+			+rmin($lg-to-xl)
+				max-width: 251px
+		&_apple
+			max-width: 69px
+			+rmin($lg-to-xl)
+				max-width: 98px
+
+
+/* modifiers for different sections */
+.grid
+	&_features
+		+rmin($sm-to-md)
+			margin: 0 -4px 24px
+			.grid__bl
+				flex-basis: 50%
+				padding: 0 16px
+		+rmin($md-to-lg)
+			margin: 0
+			.grid__bl
+				flex-basis: 33%
+				margin-bottom: 56px
+				padding: 0 15px
+	&_cases
+		margin-bottom: 16px
+		+rmin($sm)
+			margin-bottom: 20px
+		+rmin($sm-to-md)
+			margin-bottom: 0
+		+rmin($md-to-lg)
+			margin: 0 -12px 24px
+			.grid__pic
+				float: left
+				margin-right: 7px
+			.grid__info
+				overflow: hidden
+		.grid__bl
+			margin-bottom: 32px
+			+rmin($sm)
+				margin-bottom: 52px
+				padding: 0 24px
+			+rmin($sm-to-md)
+				max-width: 815px
+				margin: 0 auto 64px
+				padding: 0
+			+rmin($md-to-lg)
+				flex-basis: 50%
+				margin-bottom: 48px
+				padding: 0 32px
+				text-align: left
+				+clr
+	&_tech
+		.grid__bl
+			margin-bottom: 60px
+			+rmin($sm)
+				flex-basis: 33%
+				margin-bottom: 42px
+	&_partners
+		+rmin($sm-to-md)
+			align-items: center
+		.grid__bl
+			margin-bottom: 74px
+			+rmin($sm)
+				flex-basis: 50%
+				&[hidden]
+					display: block
+			+rmin($sm-to-md)
+				flex-basis: 33%
+				margin-bottom: 56px
+				&.grid__bl_forklog
+					order: 0
+				&.grid__bl_huffpost
+					order: 1
+				&.grid__bl_merkle
+					order: 3
+				&.grid__bl_digital-journal
+					order: 4
+				&.grid__bl_bitcoin-warrior
+					order: 5
+				&.grid__bl_tc
+					order: 6
+				&.grid__bl_bitcoinist
+					order: 7
+				&.grid__bl_vb
+					order: 8
+				&.grid__bl_bbc
+					order: 9
+			+rmin($md)
+				margin-bottom: 74px
+			&:last-child
+				margin-bottom: 62px
+				+rmin($sm-to-md)
+					margin-bottom: 56px
+				+rmin($md)
+					margin-bottom: 74px
+	&_companies
+		align-items: center
+		+rmin($lg)
+			max-width: 1134px
+			margin: 0 auto
+		+rmin($xl)
+			max-width: 100%
+		.grid__bl
+			margin-bottom: 64px
+			+rmin($sm)
+				flex-basis: 50%
+				&[hidden]
+					display: block
+			+rmin($md-to-lg)
+				flex-basis: 33%
+				&_ey
+					order: 3
+				&_horowitz
+					order: 4
+				&_apple
+					order: 5
+				&_sequoia
+					order: 6
+			+rmin($lg-to-xl)
+				margin-bottom: 100px
+	&_team
+		+rmin($sm)
+			margin: 0 12px 38px 0
+			padding: 70px 0 76px
+			background: #fff
+			box-shadow: 12px -8px 0 0 $pale-grey-three
+		+rmin($sm-to-md)
+			display: none
+		.grid__bl
+			margin-bottom: 78px
+			+rmin($sm)
+				flex-basis: 33%
+				margin-bottom: 0
+				padding: 0 12px
+			&:last-child
+				margin-bottom: 51px
+				+rmin($sm)
+					margin-bottom: 0

@@ -1,0 +1,49 @@
+.footer
+	position: relative
+	margin-top: 50px
+	// padding-top: 145px
+	padding-top: 68px
+	padding-bottom: 68px
+	// overflow: hidden
+	background: $pale-grey-four
+	// +rmin($xs)
+	// 	padding-top: 200px
+	// &:before
+	// 	content: ""
+	// 	position: absolute
+	// 	z-index: -1
+	// 	top: 0
+	// 	width: 100%
+	// 	height: 100%
+	// 	min-height: 100vmax
+	// 	background: $pale-grey-four
+	// 	transform: skewY(-30deg)
+	// 	transform-origin: top right
+	&__in
+		position: relative
+		display: flex
+		justify-content: flex-end
+	&__bl
+		flex-basis: 65%
+		+rmin($sm-to-md)
+			flex-basis: 50%
+	&__el
+		+rmin($sm)
+			display: inline-block
+			padding-right: 18px
+	&__copyright
+		max-width: 230px
+		margin-bottom: 10px
+		font-size: 12px
+		font-weight: 300
+		opacity: 0.5
+		line-height: 1.33
+		color: $midnight
+	&__link
+		font-size: 13px
+		font-weight: 300
+		line-height: 3.08
+		color: #2e81ff
+		border: 1px solid transparent
+		&:hover
+			border-bottom-color: #2e81ff

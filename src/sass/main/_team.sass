@@ -1,0 +1,71 @@
+.team
+	+rmin($sm-to-md)
+		padding: 0 5px
+	+rmin($md-to-lg)
+		padding: 0 23px
+	+rmin($lg)
+		padding: 0
+	&__in
+		+rmin($lg)
+			max-width: 1134px
+			margin: 0 auto
+	&__title
+		margin-bottom: 56px
+		text-align: center
+		font-size: 38px
+		line-height: 1.32
+		letter-spacing: -0.6px
+		color: #2e81ff
+		+rmin($sm)
+			margin-bottom: 52px
+			font-size: 53px
+			font-weight: 300
+			line-height: 1.43
+			letter-spacing: -0.8px
+	&__info
+		position: relative
+		margin-bottom: 46px
+		text-align: center
+		font-size: 17px
+		font-weight: 300
+		line-height: 1.41
+		letter-spacing: 0.2px
+		color: rgba($charcoal-grey, 0.8)
+		+rmin($sm)
+			max-width: 576px
+			margin: 0 auto 46px
+		+rmin($sm-to-md)
+			max-width: 274px
+			text-align: left
+			margin: 0
+			font-weight: 400
+		+rmin($md-to-lg)
+			max-width: 329px
+	&__subtitle
+		margin-bottom: 18px
+		padding: 0 20px
+		font-size: 29px
+		font-weight: 300
+		line-height: 1.38
+		letter-spacing: normal
+		color: rgba($midnight, 0.88)
+		+rmin($sm)
+			margin-bottom: 14px
+		+rmin($sm-to-md)
+			margin-bottom: 23px
+			padding: 0
+		+rmin($md-to-lg)
+			margin-bottom: 18px
+	&__img
+		margin-top: -100px
+		+rmin($sm-to-md)
+			display: block
+		+rmin($md)
+			margin-top: -200px
+		+rmin($md-to-lg)
+			margin-top: -142px
+		img
+			max-width: 100%
+			margin: 0 auto
+			+rmin($md-to-lg)
+				width: 100%
