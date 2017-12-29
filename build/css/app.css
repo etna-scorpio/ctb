@@ -155,6 +155,14 @@ a {
   margin-bottom: 60px;
 }
 
+.grid_partners .grid__bl {
+  margin-bottom: 74px;
+}
+
+.grid_partners .grid__bl:last-child {
+  margin-bottom: 62px;
+}
+
 .grid__bl {
   -ms-flex-preferred-size: 100%;
   flex-basis: 100%;
@@ -212,6 +220,42 @@ a {
   max-width: 147px;
 }
 
+.grid__img_forklog {
+  max-width: 155px;
+}
+
+.grid__img_digital-journal {
+  max-width: 223px;
+}
+
+.grid__img_bitcoinist {
+  max-width: 189px;
+}
+
+.grid__img_merkle {
+  max-width: 157px;
+}
+
+.grid__img_bbc {
+  max-width: 162px;
+}
+
+.grid__img_huffpost {
+  max-width: 175px;
+}
+
+.grid__img_bitcoin-warrior {
+  max-width: 142px;
+}
+
+.grid__img_vb {
+  max-width: 81px;
+}
+
+.grid__img_tc {
+  max-width: 114px;
+}
+
 .card-wrap {
   display: -ms-flexbox;
   display: flex;
@@ -219,7 +263,6 @@ a {
   justify-content: center;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  margin: 0 -18px;
 }
 
 .card {
@@ -891,6 +934,12 @@ a {
   color: #2e81ff;
 }
 
+.partners__inner {
+  padding-top: 55px;
+  margin: 0 -12px;
+  background: #3b404c;
+}
+
 @media only screen and (min-width: 375px) {
 
   .hero:after {
@@ -948,6 +997,15 @@ a {
     margin-bottom: 42px;
   }
 
+  .grid_partners .grid__bl {
+    -ms-flex-preferred-size: 50%;
+    flex-basis: 50%;
+  }
+
+  .grid_partners .grid__bl[hidden] {
+    display: block;
+  }
+
   .grid__pic {
     margin-bottom: 11px;
   }
@@ -963,6 +1021,18 @@ a {
 
   .grid__img_parity {
     padding-top: 5px;
+  }
+
+  .grid__img_bitcoin-warrior {
+    margin-top: -15px;
+  }
+
+  .grid__img_vb {
+    margin-top: -15px;
+  }
+
+  .grid__img_tc {
+    margin-top: -15px;
   }
 
   .card {
@@ -1140,6 +1210,10 @@ a {
   .media__in {
     padding: 0 30px;
   }
+
+  .partners__inner {
+    margin: 0;
+  }
 }
 
 @media only screen and (min-width: 768px) {
@@ -1175,6 +1249,66 @@ a {
     padding: 0;
   }
 
+  .grid_partners {
+    -ms-flex-align: center;
+    align-items: center;
+  }
+
+  .grid_partners .grid__bl {
+    -ms-flex-preferred-size: 33%;
+    flex-basis: 33%;
+    margin-bottom: 56px;
+  }
+
+  .grid_partners .grid__bl.grid__bl_forklog {
+    -ms-flex-order: 0;
+    order: 0;
+  }
+
+  .grid_partners .grid__bl.grid__bl_huffpost {
+    -ms-flex-order: 1;
+    order: 1;
+  }
+
+  .grid_partners .grid__bl.grid__bl_merkle {
+    -ms-flex-order: 3;
+    order: 3;
+  }
+
+  .grid_partners .grid__bl.grid__bl_digital-journal {
+    -ms-flex-order: 4;
+    order: 4;
+  }
+
+  .grid_partners .grid__bl.grid__bl_bitcoin-warrior {
+    -ms-flex-order: 5;
+    order: 5;
+  }
+
+  .grid_partners .grid__bl.grid__bl_tc {
+    -ms-flex-order: 6;
+    order: 6;
+  }
+
+  .grid_partners .grid__bl.grid__bl_bitcoinist {
+    -ms-flex-order: 7;
+    order: 7;
+  }
+
+  .grid_partners .grid__bl.grid__bl_vb {
+    -ms-flex-order: 8;
+    order: 8;
+  }
+
+  .grid_partners .grid__bl.grid__bl_bbc {
+    -ms-flex-order: 9;
+    order: 9;
+  }
+
+  .grid_partners .grid__bl:last-child {
+    margin-bottom: 56px;
+  }
+
   .grid__bl {
     margin-bottom: 48px;
   }
@@ -1187,9 +1321,22 @@ a {
     letter-spacing: -0.1px;
   }
 
+  .grid__img_bitcoin-warrior {
+    margin-top: 0;
+  }
+
+  .grid__img_vb {
+    margin-top: 0;
+  }
+
+  .grid__img_tc {
+    margin-top: 0;
+  }
+
   .card-wrap {
     -ms-flex-pack: justify;
     justify-content: space-between;
+    margin: 0 -18px;
   }
 
   .card {
@@ -1378,6 +1525,10 @@ a {
     padding: 0 4px;
     overflow: hidden;
   }
+
+  .partners__inner {
+    padding: 58px 30px 0;
+  }
 }
 
 @media only screen and (min-width: 1022px) {
@@ -1388,6 +1539,14 @@ a {
 
   .title-h1_hero {
     font-size: 120px;
+  }
+
+  .grid_partners .grid__bl {
+    margin-bottom: 74px;
+  }
+
+  .grid_partners .grid__bl:last-child {
+    margin-bottom: 74px;
   }
 
   .card__text {
@@ -1452,6 +1611,10 @@ a {
 
   .tech__inner {
     padding: 42px 24px 0;
+  }
+
+  .partners__inner {
+    padding: 65px 30px 0;
   }
 }
 

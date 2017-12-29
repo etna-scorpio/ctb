@@ -1,0 +1,39 @@
+<!-- begin partners -->
+<div class="partners">
+	<div class="l-center">
+		<div class="partners__inner">
+			<div class="grid grid_partners">
+				{% set partners = [{
+					logo: 'forklog'
+				}, {
+					logo: 'huffpost',
+					hidden: true
+				},{
+					logo: 'digital-journal'
+				}, {
+					logo: 'bitcoin-warrior',
+					hidden: true
+				}, {
+					logo: 'bitcoinist'
+				}, {
+					logo: 'vb',
+					hidden: true
+				}, {
+					logo: 'merkle'
+				}, {
+					logo: 'tc',
+					hidden: true
+				}, {
+					logo: 'bbc'
+				}] %}
+
+				{% for partner in partners %}
+				<div class="grid__bl grid__bl_{{ partner.logo }}" {% if partner.hidden %}hidden{% endif %}>
+					<img class="grid__img grid__img_{{ partner.logo }}" src="img/partners/{{ partner.logo }}.png" alt="{{ partner.logo }}">
+				</div>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+</div>
+<!-- end partners -->

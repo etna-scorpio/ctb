@@ -47,6 +47,44 @@
 			+rmin($sm)
 				flex-basis: 33%
 				margin-bottom: 42px
+	&_partners
+		+rmin($sm-to-md)
+			align-items: center
+		.grid__bl
+			margin-bottom: 74px
+			+rmin($sm)
+				flex-basis: 50%
+				&[hidden]
+					display: block
+			+rmin($sm-to-md)
+				flex-basis: 33%
+				margin-bottom: 56px
+				&.grid__bl_forklog
+					order: 0
+				&.grid__bl_huffpost
+					order: 1
+				&.grid__bl_merkle
+					order: 3
+				&.grid__bl_digital-journal
+					order: 4
+				&.grid__bl_bitcoin-warrior
+					order: 5
+				&.grid__bl_tc
+					order: 6
+				&.grid__bl_bitcoinist
+					order: 7
+				&.grid__bl_vb
+					order: 8
+				&.grid__bl_bbc
+					order: 9
+			+rmin($md)
+				margin-bottom: 74px
+			&:last-child
+				margin-bottom: 62px
+				+rmin($sm-to-md)
+					margin-bottom: 56px
+				+rmin($md)
+					margin-bottom: 74px
 	&__bl
 		flex-basis: 100%
 		margin-bottom: 45px
@@ -108,3 +146,33 @@
 			max-width: 147px
 			+rmin($sm)
 				padding-top: 5px
+		&_forklog
+			max-width: 155px
+		&_digital-journal
+			max-width: 223px
+		&_bitcoinist
+			max-width: 189px
+		&_merkle
+			max-width: 157px
+		&_bbc
+			max-width: 162px
+		&_huffpost
+			max-width: 175px
+		&_bitcoin-warrior
+			max-width: 142px
+			+rmin($sm)
+				margin-top: -15px
+			+rmin($sm-to-md)
+				margin-top: 0
+		&_vb
+			max-width: 81px
+			+rmin($sm)
+				margin-top: -15px
+			+rmin($sm-to-md)
+				margin-top: 0
+		&_tc
+			max-width: 114px
+			+rmin($sm)
+				margin-top: -15px
+			+rmin($sm-to-md)
+				margin-top: 0
