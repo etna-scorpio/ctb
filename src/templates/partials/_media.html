@@ -1,0 +1,29 @@
+<!-- begin media -->
+<div class="media">
+	<div class="l-center">
+		<div class="media__in">
+			<div class="media__title">Media</div>
+			<div class="card-wrap">
+				{% for i in range(0,6) %}
+				<div class="card card_media" {% if loop.index > 3 %}hidden{% endif %}>
+					<div class="card__in">
+						{% if loop.first %}
+						<div class="card__pic" style="background-image: url(https://picsum.photos/504/280/?random)"></div>
+						{% elif loop.last %}
+						<div class="card__pic" style="background-image: url(https://picsum.photos/504/280)"></div>
+						{% else %}
+						<div class="card__pic" style="background-image: url(https://picsum.photos/504/281/?random)"></div>
+						{% endif %}
+						<div class="card__title">Lorem Ipsum</div>
+						<div class="card__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut</div>
+						<div class="card__more">
+							<a href="#" class="card__link">Find out more</a>
+						</div>
+					</div>
+				</div>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+</div>
+<!-- end media -->

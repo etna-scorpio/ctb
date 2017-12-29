@@ -1,0 +1,35 @@
+.media
+	padding: 56px 0
+	+rmin($sm)
+		padding: 44px 0 4px
+	+rmin($sm-to-md)
+		padding: 56px 0 12px
+	+rmin($md-to-lg)
+		padding: 72px 0 32px
+	&__title
+		margin-bottom: 36px
+		text-align: center
+		font-size: 38px
+		font-weight: 100
+		line-height: 1.32
+		letter-spacing: -0.6px
+		color: #2e81ff
+		+rmin($sm)
+			font-size: 53px
+			font-weight: 300
+			line-height: 1.43
+			letter-spacing: -0.8px
+		+rmin($sm-to-md)
+			margin-bottom: 40px
+		+rmin($md-to-lg)
+			font-size: 60px
+			line-height: 1.27
+			letter-spacing: -0.9px
+	&__in
+		+rmin($sm)
+			padding: 0 30px
+		+rmin($sm-to-md)
+			padding: 0 4px
+			overflow: hidden
+		+rmin($md-to-lg)
+			padding: 0

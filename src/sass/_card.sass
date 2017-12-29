@@ -1,0 +1,82 @@
+.card-wrap
+	display: flex
+	justify-content: center
+	flex-wrap: wrap
+	margin: 0 -18px
+	+rmin($sm-to-md)
+		justify-content: space-between
+	+rmin($md-to-lg)
+		margin: 0 -12px
+	+rmin($lg-to-xl)
+		margin: 0 -19px
+		justify-content: flex-start
+
+.card
+	flex-basis: 100%
+	margin-bottom: 44px
+	+rmin($sm)
+		margin-bottom: 52px
+	+rmin($sm-to-md)
+		flex-basis: 50%
+		&[hidden]
+			display: block
+	+rmin($md-to-lg)
+		flex-basis: 33%
+		margin-bottom: 32px
+	+rmin($lg-to-xl)
+		flex-basis: 25%
+		margin-bottom: 40px
+	&_media
+		padding-right: 12px
+		+rmin($sm-to-md)
+			padding: 0 30px 0 18px
+		+rmin($md-to-lg)
+			padding: 0 24px 0 12px
+		+rmin($lg-to-xl)
+			padding: 0 31px 0 19px
+	&__in
+		min-height: 312px
+		margin: 0 auto
+		padding: 16px
+		background: #FFF
+		box-shadow: 12px -8px 0 0 $pale-grey-three
+		+rmin($sm)
+			padding: 24px 24px 20px
+		+rmin($sm-to-md)
+			padding: 16px
+	&__pic
+		width: 100%
+		height: 140px
+		margin-bottom: 8px
+		background-size: cover
+		background-position: center center
+		+rmin($sm)
+			height: 236px
+		+rmin($sm-to-md)
+			height: 140px
+	&__title
+		margin-bottom: 4px
+		font-size: 17px
+		font-weight: 500
+		line-height: 1.41
+		letter-spacing: 0.2px
+		color: rgba($midnight, 0.88)
+	&__text
+		margin-bottom: 8px
+		font-size: 17px
+		line-height: 1.41
+		letter-spacing: -0.1px
+		color: rgba($charcoal-grey, 0.88)
+		+rmin($sm)
+			margin-bottom: 20px
+		+rmin($md)
+			min-height: 72px
+			margin-bottom: 8px
+	&__link
+		font-size: 17px
+		line-height: 1.41
+		letter-spacing: 0.2px
+		color: $cerulean-blue
+		border-bottom: 1px solid transparent
+		&:hover
+			border-bottom-color: $cerulean-blue
