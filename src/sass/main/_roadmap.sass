@@ -1,0 +1,155 @@
+.roadmap
+	padding-top: 56px
+	+rmin($sm-to-md)
+		padding: 56px 4px 0
+	&__title
+		padding-left: 56px
+		+rmin($sm)
+			padding-left: 68px
+		+rmin($sm-to-md)
+			padding-left: 0
+
+.roadmap-grid
+	display: flex
+	flex-wrap: wrap
+	+rmin($sm-to-md)
+		position: relative
+		padding: 0 15%
+		// first and last block of the road - simple lines
+		&:before,
+		&:after
+			content: ""
+			position: absolute
+			height: 48px
+			background: $pale-grey-four
+		&:before
+			top: 41px
+			left: 0
+			width: 50%
+			border-radius: 30px
+		&:after
+			width: 30%
+			bottom: 179px
+			right: 35%
+			border-radius: 0 30px 30px 0
+	&__bl
+		flex-basis: 100%
+		position: relative
+		padding-bottom: 45px
+		+rmin($sm-to-md)
+			flex-basis: 50%
+			width: 50%
+			height: 268px
+			// outline: 1px solid
+			// left curve of the road
+			&:nth-child(3),
+			&:nth-child(7)
+				&:after
+					content: ''
+					position: absolute
+					z-index: 1
+					top: 41px
+					left: -110px
+					width: 235px
+					height: 316px
+					background-image: url(../img/multicolor-svg/roadmap-curve-l.svg)
+					background-repeat: no-repeat
+					background-position: top left
+					background-color: $pale-grey
+			&_curve-r
+				// right curve of the road
+				&:nth-child(2),
+				&:nth-child(6)
+					&:after
+						content: ''
+						position: absolute
+						z-index: 1
+						top: 41px
+						right: -110px
+						width: 235px
+						height: 316px
+						background-image: url(../img/multicolor-svg/roadmap-curve-r.svg)
+						background-repeat: no-repeat
+						background-position: top right
+						background-color: $pale-grey
+		// piece of road in each block
+		&:before
+			content: ''
+			position: absolute
+			top: 0
+			left: 17px
+			width: 8px
+			height: 100%
+			border-radius: 4px
+			background: $pale-grey-four
+			+rmin($sm-to-md)
+				top: 41px
+				left: 0
+				right: 0
+				width: 100%
+				height: 48px
+				border-radius: 0
+		&:last-child
+			padding-bottom: 0
+			+rmin($sm)
+				padding-bottom: 20px
+	&__ttl
+		max-width: 100%
+		margin-bottom: 14px
+		text-align: center
+		font-size: 19px
+		font-weight: 500
+		line-height: 1.26
+		letter-spacing: -0.1px
+		white-space: nowrap
+		text-overflow: ellipsis
+		overflow: hidden
+		color: rgba($midnight, 0.88)
+		+rmin($sm-to-md)
+			margin-bottom: 84px
+			text-align: left
+	&__txt
+		+rmin($sm-to-md)
+			position: relative
+			max-height: 115px
+			overflow: hidden
+			&:after
+				content: ""
+				text-align: right
+				position: absolute
+				bottom: 0
+				right: 0
+				width: 50%
+				height: 1.26em
+				background: linear-gradient(to right, rgba(255, 255, 255, 0), $pale-grey 88%)
+	&__info
+		position: relative
+		z-index: 2
+		padding-left: 56px
+		font-size: 17px
+		line-height: 1.41
+		letter-spacing: 0.2px
+		color: rgba($charcoal-grey, 0.8)
+		+rmin($sm)
+			padding-left: 68px
+		+rmin($sm-to-md)
+			padding-left: 17px
+			padding-right: 1em
+	&__point
+		position: absolute
+		top: -38px
+		left: -2px
+		width: 98px
+		height: 76px
+		background-image: url(../img/multicolor-svg/point-to-do.svg)
+		background-size: contain
+		background-repeat: no-repeat
+		+rmin($sm-to-md)
+			z-index: 2
+			top: 41px
+			left: 5px
+			height: 48px
+			background-size: auto
+			background-position: center bottom
+		&_done
+			background-image: url(../img/multicolor-svg/point-done.svg)

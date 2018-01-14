@@ -1,0 +1,33 @@
+<!-- begin roadmap -->
+<div class="roadmap">
+	<div class="l-center">
+		<div class="roadmap__title">
+			<h2 class="title-h2">Roadmap</h2>
+		</div>
+		<div class="roadmap-grid">
+			{% for i in range(0, 9) %}
+			{% if loop.index % 2 == 0 %}
+			<div class="roadmap-grid__bl roadmap-grid__bl_curve-r">
+			{% else %}
+			<div class="roadmap-grid__bl">
+			{% endif %}
+				{% if loop.index < 3 %}
+				<div class="roadmap-grid__point roadmap-grid__point_done"></div>
+				{% else %}
+				<div class="roadmap-grid__point"></div>
+				{% endif %}
+				<div class="roadmap-grid__info">
+					{% if loop.index % 2 == 0 %}
+					<div class="roadmap-grid__ttl">May 2017</div>
+					<div class="roadmap-grid__txt">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</div>
+					{% else %}
+					<div class="roadmap-grid__ttl">April 2017</div>
+					<div class="roadmap-grid__txt">Cupiditate et, natus sapiente soluta, nam dolore corporis! Obcaecati neque vitae porro!</div>
+					{% endif %}
+				</div>
+			</div>
+			{% endfor %}
+		</div>
+	</div>
+</div>
+<!-- end roadmap -->

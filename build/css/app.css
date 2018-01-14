@@ -105,6 +105,16 @@ a {
   letter-spacing: 2px;
 }
 
+.title-h2 {
+  margin-bottom: 38px;
+  text-align: center;
+  font-size: 38px;
+  font-weight: 300;
+  color: #2e81ff;
+  letter-spacing: -0.6px;
+  line-height: 1.32;
+}
+
 .button {
   display: inline-block;
   width: 100%;
@@ -895,16 +905,6 @@ a {
   padding: 56px 0 12px;
 }
 
-.features__ttl {
-  margin-bottom: 38px;
-  text-align: center;
-  font-size: 38px;
-  font-weight: normal;
-  line-height: 1.32;
-  letter-spacing: -0.6px;
-  color: #2e81ff;
-}
-
 .feature-icon {
   display: inline-block;
   width: 84px;
@@ -967,16 +967,6 @@ a {
   padding: 56px 0;
 }
 
-.media__title {
-  margin-bottom: 36px;
-  text-align: center;
-  font-size: 38px;
-  font-weight: 100;
-  line-height: 1.32;
-  letter-spacing: -0.6px;
-  color: #2e81ff;
-}
-
 .partners__inner {
   padding-top: 55px;
   margin: 0 -12px;
@@ -985,24 +975,6 @@ a {
 
 .companies {
   padding: 56px 0 8px;
-}
-
-.companies__title {
-  margin-bottom: 56px;
-  text-align: center;
-  font-size: 38px;
-  line-height: 1.32;
-  letter-spacing: -0.6px;
-  color: #2e81ff;
-}
-
-.team__title {
-  margin-bottom: 56px;
-  text-align: center;
-  font-size: 38px;
-  line-height: 1.32;
-  letter-spacing: -0.6px;
-  color: #2e81ff;
 }
 
 .team__info {
@@ -1033,6 +1005,82 @@ a {
 .team__img img {
   max-width: 100%;
   margin: 0 auto;
+}
+
+.roadmap {
+  padding-top: 56px;
+}
+
+.roadmap__title {
+  padding-left: 56px;
+}
+
+.roadmap-grid {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.roadmap-grid__bl {
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
+  position: relative;
+  padding-bottom: 45px;
+}
+
+.roadmap-grid__bl:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 17px;
+  width: 8px;
+  height: 100%;
+  border-radius: 4px;
+  background: #d9dee5;
+}
+
+.roadmap-grid__bl:last-child {
+  padding-bottom: 0;
+}
+
+.roadmap-grid__ttl {
+  max-width: 100%;
+  margin-bottom: 14px;
+  text-align: center;
+  font-size: 19px;
+  font-weight: 500;
+  line-height: 1.26;
+  letter-spacing: -0.1px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  color: rgba(1, 6, 13, 0.88);
+}
+
+.roadmap-grid__info {
+  position: relative;
+  z-index: 2;
+  padding-left: 56px;
+  font-size: 17px;
+  line-height: 1.41;
+  letter-spacing: 0.2px;
+  color: rgba(59, 64, 76, 0.8);
+}
+
+.roadmap-grid__point {
+  position: absolute;
+  top: -38px;
+  left: -2px;
+  width: 98px;
+  height: 76px;
+  background-image: url(../img/multicolor-svg/point-to-do.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.roadmap-grid__point_done {
+  background-image: url(../img/multicolor-svg/point-done.svg);
 }
 
 .footer {
@@ -1108,6 +1156,14 @@ a {
   .title-h1 {
     font-size: 74px;
     letter-spacing: 2.3px;
+  }
+
+  .title-h2 {
+    margin-bottom: 45px;
+    font-size: 53px;
+    font-weight: 100;
+    line-height: 1.43;
+    letter-spacing: -0.8px;
   }
 
   .button {
@@ -1347,14 +1403,6 @@ a {
     padding: 52px 0 56px;
   }
 
-  .features__ttl {
-    margin-bottom: 45px;
-    font-size: 53px;
-    font-weight: 100;
-    line-height: 1.43;
-    letter-spacing: -0.8px;
-  }
-
   .feature-icon {
     width: 108px;
     height: 87px;
@@ -1369,13 +1417,6 @@ a {
     padding: 44px 0 4px;
   }
 
-  .media__title {
-    font-size: 53px;
-    font-weight: 300;
-    line-height: 1.43;
-    letter-spacing: -0.8px;
-  }
-
   .media__in {
     padding: 0 30px;
   }
@@ -1388,21 +1429,6 @@ a {
     padding: 64px 0 13px;
   }
 
-  .companies__title {
-    font-size: 53px;
-    font-weight: 300;
-    line-height: 1.43;
-    letter-spacing: -0.8px;
-  }
-
-  .team__title {
-    margin-bottom: 52px;
-    font-size: 53px;
-    font-weight: 300;
-    line-height: 1.43;
-    letter-spacing: -0.8px;
-  }
-
   .team__info {
     max-width: 576px;
     margin: 0 auto 46px;
@@ -1410,6 +1436,18 @@ a {
 
   .team__subtitle {
     margin-bottom: 14px;
+  }
+
+  .roadmap__title {
+    padding-left: 68px;
+  }
+
+  .roadmap-grid__bl:last-child {
+    padding-bottom: 20px;
+  }
+
+  .roadmap-grid__info {
+    padding-left: 68px;
   }
 
   .footer__el {
@@ -1429,6 +1467,13 @@ a {
 
   .title-h1_bitcoin {
     letter-spacing: -0.6px;
+  }
+
+  .title-h2 {
+    margin-bottom: 48px;
+    font-size: 60px;
+    line-height: 1.27;
+    letter-spacing: -0.9px;
   }
 
   .grid__bl {
@@ -1704,13 +1749,6 @@ a {
     padding: 72px 0 48px;
   }
 
-  .features__ttl {
-    margin-bottom: 48px;
-    font-size: 60px;
-    line-height: 1.27;
-    letter-spacing: -0.9px;
-  }
-
   .features__btn {
     padding: 0 36px;
   }
@@ -1721,10 +1759,6 @@ a {
 
   .media {
     padding: 56px 0 12px;
-  }
-
-  .media__title {
-    margin-bottom: 40px;
   }
 
   .media__in {
@@ -1738,13 +1772,6 @@ a {
 
   .companies {
     padding: 72px 0 13px;
-  }
-
-  .companies__title {
-    font-size: 60px;
-    font-weight: 100;
-    line-height: 1.27;
-    letter-spacing: -0.9px;
   }
 
   .team {
@@ -1765,6 +1792,120 @@ a {
 
   .team__img {
     display: block;
+  }
+
+  .roadmap {
+    padding: 56px 4px 0;
+  }
+
+  .roadmap__title {
+    padding-left: 0;
+  }
+
+  .roadmap-grid {
+    position: relative;
+    padding: 0 15%;
+  }
+
+  .roadmap-grid:before, .roadmap-grid:after {
+    content: "";
+    position: absolute;
+    height: 48px;
+    background: #d9dee5;
+  }
+
+  .roadmap-grid:before {
+    top: 41px;
+    left: 0;
+    width: 50%;
+    border-radius: 30px;
+  }
+
+  .roadmap-grid:after {
+    width: 30%;
+    bottom: 179px;
+    right: 35%;
+    border-radius: 0 30px 30px 0;
+  }
+
+  .roadmap-grid__bl {
+    -ms-flex-preferred-size: 50%;
+    flex-basis: 50%;
+    width: 50%;
+    height: 268px;
+  }
+
+  .roadmap-grid__bl:nth-child(3):after, .roadmap-grid__bl:nth-child(7):after {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    top: 41px;
+    left: -110px;
+    width: 235px;
+    height: 316px;
+    background-image: url(../img/multicolor-svg/roadmap-curve-l.svg);
+    background-repeat: no-repeat;
+    background-position: top left;
+    background-color: #f7f9fb;
+  }
+
+  .roadmap-grid__bl_curve-r:nth-child(2):after, .roadmap-grid__bl_curve-r:nth-child(6):after {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    top: 41px;
+    right: -110px;
+    width: 235px;
+    height: 316px;
+    background-image: url(../img/multicolor-svg/roadmap-curve-r.svg);
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-color: #f7f9fb;
+  }
+
+  .roadmap-grid__bl:before {
+    top: 41px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 48px;
+    border-radius: 0;
+  }
+
+  .roadmap-grid__ttl {
+    margin-bottom: 84px;
+    text-align: left;
+  }
+
+  .roadmap-grid__txt {
+    position: relative;
+    max-height: 115px;
+    overflow: hidden;
+  }
+
+  .roadmap-grid__txt:after {
+    content: "";
+    text-align: right;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 50%;
+    height: 1.26em;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), #f7f9fb 88%);
+  }
+
+  .roadmap-grid__info {
+    padding-left: 17px;
+    padding-right: 1em;
+  }
+
+  .roadmap-grid__point {
+    z-index: 2;
+    top: 41px;
+    left: 5px;
+    height: 48px;
+    background-size: auto;
+    background-position: center bottom;
   }
 
   .footer__bl {
@@ -1866,6 +2007,10 @@ a {
 
 @media only screen and (min-width: 1024px) {
 
+  .title-h2 {
+    margin-bottom: 48px;
+  }
+
   .grid__ttl {
     min-height: 48px;
     margin-bottom: 4px;
@@ -1957,10 +2102,6 @@ a {
     padding: 72px 0;
   }
 
-  .features__ttl {
-    margin-bottom: 48px;
-  }
-
   .features__btn {
     padding: 0 80px;
   }
@@ -1996,12 +2137,6 @@ a {
 
   .media {
     padding: 72px 0 32px;
-  }
-
-  .media__title {
-    font-size: 60px;
-    line-height: 1.27;
-    letter-spacing: -0.9px;
   }
 
   .media__in {
