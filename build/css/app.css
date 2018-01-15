@@ -1045,16 +1045,12 @@ a {
 }
 
 .roadmap-grid__ttl {
-  max-width: 100%;
   margin-bottom: 14px;
   text-align: center;
   font-size: 19px;
   font-weight: 500;
   line-height: 1.26;
   letter-spacing: -0.1px;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
   color: rgba(1, 6, 13, 0.88);
 }
 
@@ -1877,8 +1873,12 @@ a {
   }
 
   .roadmap-grid__ttl {
+    max-width: 100%;
     margin-bottom: 84px;
     text-align: left;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
   }
 
   .roadmap-grid__txt {
