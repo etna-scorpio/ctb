@@ -2,6 +2,8 @@
 	padding-top: 56px
 	+rmin($sm-to-md)
 		padding: 56px 4px 0
+	+rmin($lg)
+		padding: 56px 0 0
 	&__title
 		padding-left: 56px
 		+rmin($sm)
@@ -27,11 +29,17 @@
 			left: 0
 			width: 50%
 			border-radius: 30px
+			+rmin($lg)
+				left: 2%
 		&:after
 			width: 30%
 			bottom: 179px
 			right: 35%
 			border-radius: 0 30px 30px 0
+			+rmin($lg)
+				display: none
+	+rmin($lg)
+		padding: 0 10%
 	&__bl
 		flex-basis: 100%
 		position: relative
@@ -40,38 +48,46 @@
 			flex-basis: 50%
 			width: 50%
 			height: 268px
+			padding-bottom: 0
 			// outline: 1px solid
-			// left curve of the road
-			&:nth-child(3),
-			&:nth-child(7)
+			&:nth-child(4n - 2),
+			&:nth-child(4n - 1)
 				&:after
 					content: ''
 					position: absolute
 					z-index: 1
 					top: 41px
-					left: -110px
 					width: 235px
 					height: 316px
-					background-image: url(../img/multicolor-svg/roadmap-curve-l.svg)
 					background-repeat: no-repeat
-					background-position: top left
 					background-color: $pale-grey
-			&_curve-r
-				// right curve of the road
-				&:nth-child(2),
-				&:nth-child(6)
+			// left curve of the road
+			&:nth-child(4n - 1)
+				// background: red
+				&:after
+					left: -43%
+					background-image: url(../img/multicolor-svg/roadmap-curve-l.svg)
+					background-position: top left
+				&:last-child
 					&:after
-						content: ''
-						position: absolute
-						z-index: 1
-						top: 41px
-						right: -110px
-						width: 235px
-						height: 316px
-						background-image: url(../img/multicolor-svg/roadmap-curve-r.svg)
-						background-repeat: no-repeat
-						background-position: top right
-						background-color: $pale-grey
+						display: none
+			// right curve of the road
+			&:nth-child(4n - 2)
+				// background: yellow
+				&:after
+					right: -43%
+					background-image: url(../img/multicolor-svg/roadmap-curve-r.svg)
+					background-position: top right
+				&:last-child
+					&:after
+						display: none
+		+rmin($lg)
+			&:nth-child(4n - 1)
+				&:after
+					left: -20%
+			&:nth-child(4n - 2)
+				&:after
+					right: -20%
 		// piece of road in each block
 		&:before
 			content: ''
@@ -93,6 +109,11 @@
 			padding-bottom: 0
 			+rmin($sm)
 				padding-bottom: 20px
+			+rmin($sm-to-md)
+				padding-bottom: 0
+			+rmin($lg)
+				&:before
+					border-radius: 0 30px 30px 0
 	&__ttl
 		max-width: 100%
 		margin-bottom: 14px
@@ -111,7 +132,7 @@
 	&__txt
 		+rmin($sm-to-md)
 			position: relative
-			max-height: 115px
+			height: 115px
 			overflow: hidden
 			&:after
 				content: ""
@@ -135,6 +156,8 @@
 		+rmin($sm-to-md)
 			padding-left: 17px
 			padding-right: 1em
+		+rmin($lg)
+			max-width: 80%
 	&__point
 		position: absolute
 		top: -38px

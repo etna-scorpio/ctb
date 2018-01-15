@@ -6,11 +6,7 @@
 		</div>
 		<div class="roadmap-grid">
 			{% for i in range(0, 9) %}
-			{% if loop.index % 2 == 0 %}
-			<div class="roadmap-grid__bl roadmap-grid__bl_curve-r">
-			{% else %}
 			<div class="roadmap-grid__bl">
-			{% endif %}
 				{% if loop.index < 3 %}
 				<div class="roadmap-grid__point roadmap-grid__point_done"></div>
 				{% else %}
