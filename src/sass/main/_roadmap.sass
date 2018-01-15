@@ -31,6 +31,8 @@
 			border-radius: 30px
 			+rmin($lg)
 				left: 2%
+			+rmin($lg-to-xl)
+				left: 0
 		&:after
 			width: 30%
 			bottom: 179px
@@ -44,50 +46,6 @@
 		flex-basis: 100%
 		position: relative
 		padding-bottom: 45px
-		+rmin($sm-to-md)
-			flex-basis: 50%
-			width: 50%
-			height: 268px
-			padding-bottom: 0
-			// outline: 1px solid
-			&:nth-child(4n - 2),
-			&:nth-child(4n - 1)
-				&:after
-					content: ''
-					position: absolute
-					z-index: 1
-					top: 41px
-					width: 235px
-					height: 316px
-					background-repeat: no-repeat
-					background-color: $pale-grey
-			// left curve of the road
-			&:nth-child(4n - 1)
-				// background: red
-				&:after
-					left: -43%
-					background-image: url(../img/multicolor-svg/roadmap-curve-l.svg)
-					background-position: top left
-				&:last-child
-					&:after
-						display: none
-			// right curve of the road
-			&:nth-child(4n - 2)
-				// background: yellow
-				&:after
-					right: -43%
-					background-image: url(../img/multicolor-svg/roadmap-curve-r.svg)
-					background-position: top right
-				&:last-child
-					&:after
-						display: none
-		+rmin($lg)
-			&:nth-child(4n - 1)
-				&:after
-					left: -20%
-			&:nth-child(4n - 2)
-				&:after
-					right: -20%
 		// piece of road in each block
 		&:before
 			content: ''
@@ -114,6 +72,87 @@
 			+rmin($lg)
 				&:before
 					border-radius: 0 30px 30px 0
+		+rmin($sm-to-md)
+			flex-basis: 50%
+			width: 50%
+			height: 268px
+			padding-bottom: 0
+			// outline: 1px solid
+			&:nth-child(4n - 2),
+			&:nth-child(4n - 1)
+				&:after
+					content: ''
+					position: absolute
+					z-index: 1
+					top: 41px
+					width: 235px
+					height: 316px
+					background-repeat: no-repeat
+					background-color: $pale-grey
+				&:last-child
+					&:after
+						display: none
+			// left curve of the road
+			&:nth-child(4n - 1)
+				// background: red
+				&:after
+					left: -43%
+					background-image: url(../img/multicolor-svg/roadmap-curve-l.svg)
+					background-position: top left
+			// right curve of the road
+			&:nth-child(4n - 2)
+				// background: yellow
+				&:after
+					right: -43%
+					background-image: url(../img/multicolor-svg/roadmap-curve-r.svg)
+					background-position: top right
+		+rmin($lg)
+			&:nth-child(4n - 1)
+				&:after
+					left: -20%
+			&:nth-child(4n - 2)
+				&:after
+					right: -20%
+		+rmin($lg-to-xl)
+			flex-basis: 33.33%
+			width: 33.33%
+			// hide curves for L screen
+			&:nth-child(4n - 1),
+			&:nth-child(4n - 2)
+				&:after
+					display: none
+					left: auto
+			// show curves for XL screen
+			&:nth-child(6n - 3),
+			&:nth-child(6n - 2)
+				&:after
+					content: ''
+					display: block
+					position: absolute
+					z-index: 1
+					top: 41px
+					width: 235px
+					height: 316px
+					background-repeat: no-repeat
+					background-color: $pale-grey
+				&:last-child
+					&:after
+						display: none
+			// left curve of the road
+			&:nth-child(6n - 2)
+				// background: blue
+				&:after
+					left: -43%
+					background-image: url(../img/multicolor-svg/roadmap-curve-l.svg)
+					background-position: top left
+			// right curve of the road
+			&:nth-child(6n - 3)
+				// background: green
+				&:after
+					right: 0
+					margin-right: -38%
+					background-image: url(../img/multicolor-svg/roadmap-curve-r.svg)
+					background-position: top right
 	&__ttl
 		max-width: 100%
 		margin-bottom: 14px
